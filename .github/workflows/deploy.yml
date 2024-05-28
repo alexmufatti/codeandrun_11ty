@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '20.x'
 
-      - run: yarn ci
+      - run: yarn install --frozen-lockfile
 
       - run: yarn build
 
