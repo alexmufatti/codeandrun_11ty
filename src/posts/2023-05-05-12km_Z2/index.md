@@ -1,13 +1,12 @@
 ---
 title: 12km Z2
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-05 07:21:21
 images: ["20230505-activity-map.png"]
-feature: "IMG_1631.jpg"
 activitydata:
   pace: 5:25min/km
   elevation: 27mt

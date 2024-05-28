@@ -1,7 +1,7 @@
 ---
 title: "FL 10km + allunghi"
 date: 2022-11-29 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

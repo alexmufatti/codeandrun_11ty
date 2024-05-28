@@ -1,6 +1,6 @@
 ---
 title: Settimana 39
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-09-25 16:03:00
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢, 🟡]
 trainingFeelings: [😀,😀,🙂, 😀]
+feature: IMG_2396_feature.jpg
 ---
 Prima settimana full dopo la _Cursa de la Mercé_!
 

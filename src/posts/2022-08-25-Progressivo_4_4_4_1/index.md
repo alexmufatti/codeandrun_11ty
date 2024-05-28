@@ -1,6 +1,6 @@
 ---
 title: Progressivo 4+4+4 (1)
-topics:
+tags:
 - sport
 - running
 categories:

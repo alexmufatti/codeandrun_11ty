@@ -1,13 +1,12 @@
 ---
 title: Corsa pomeridiana
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-02-22 17:28:29
 images: ["20230222-activity-map.png"]
-feature: "20230222-activity-map.png"
 activitydata:
   pace: 4:60min/km
   elevation: 44mt

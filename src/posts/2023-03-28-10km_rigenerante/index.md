@@ -1,13 +1,12 @@
 ---
 title: 10km rigenerante 
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-03-28 12:44:45
 images: ["20230328-activity-map.png"]
-feature: "20230328-activity-map.png"
 activitydata:
   pace: 5:22min/km
   elevation: 24mt

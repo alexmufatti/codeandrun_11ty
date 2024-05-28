@@ -1,6 +1,6 @@
 ---
 title: 8x20" in salita + 8x60" in piano
-topics:
+tags:
 - sport
 - running
 categories: 

@@ -1,13 +1,12 @@
 ---
 title: Corsa mattutina
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-02-19 08:37:17
 images: ["20230219-activity-map.png"]
-feature: "20230219-activity-map.png"
 activitydata:
   pace: 4:41min/km
   elevation: 23mt

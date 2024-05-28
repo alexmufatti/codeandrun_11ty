@@ -1,13 +1,12 @@
 ---
 title: FL 10km
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-18 12:49:20
 images: ["20230418-activity-map.png"]
-feature: "IMG_1552.jpg"
 activitydata:
   pace: 5:23min/km
   elevation: 24mt

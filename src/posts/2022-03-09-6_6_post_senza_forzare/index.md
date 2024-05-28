@@ -2,7 +2,7 @@
 title: 6+6 post 💉 senza forzare 
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-03-09 13:14:07

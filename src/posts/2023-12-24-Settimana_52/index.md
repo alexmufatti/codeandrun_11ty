@@ -1,6 +1,6 @@
 ---
 title: Settimana 52
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-12-25 18:52:22
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢]
 trainingFeelings: [🙂,🙂,🙂,🙂]
+feature: IMG_2848_feature.jpg
 ---
 Settimana di _vacanza_ tra brianza, varesotto e svizzera!
 <!--more--> 

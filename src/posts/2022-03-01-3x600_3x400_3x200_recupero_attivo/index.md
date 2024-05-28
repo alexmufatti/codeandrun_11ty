@@ -2,7 +2,7 @@
 title: 3x600 3x400 3x200 recupero attivo
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - ripetute

@@ -1,7 +1,7 @@
 ---
 title: "4x(5'+3' rec.)"
 date: 2022-11-22 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

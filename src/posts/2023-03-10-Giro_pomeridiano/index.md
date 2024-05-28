@@ -1,13 +1,12 @@
 ---
 title: Giro pomeridiano
-topics:
+tags:
 - sport
 - cycling
 categories:
   - Sport
 date: 2023-03-10 17:13:35
 images: ["20230310-activity-map.png"]
-feature: "20230310-activity-map.png"
 activitydata:
   speed: 15.83km/h
   max speed: 26.36km/h

@@ -2,7 +2,7 @@
 title: 3x3000
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-02-18 12:46:04

@@ -1,6 +1,6 @@
 ---
 title: Settimana 20
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-05-13 18:03:24
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢,🟡]
 trainingFeelings: [😀,😀,😀,😀,😐]
+feature: IMG_3197-feature.jpg
 ---
 Ultima settimana di carico prima della Cursa Diagonal 10K
 

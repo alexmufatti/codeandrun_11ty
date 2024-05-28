@@ -1,7 +1,7 @@
 ---
 title: "Corsa a caso"
 date: 2022-11-12 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

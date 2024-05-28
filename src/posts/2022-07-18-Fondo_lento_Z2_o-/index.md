@@ -1,6 +1,6 @@
 ---
 title: Fondo lento Z2 +o-
-topics:
+tags:
 - sport
 - running
 categories:

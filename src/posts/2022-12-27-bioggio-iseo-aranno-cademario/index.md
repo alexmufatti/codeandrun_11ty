@@ -1,7 +1,7 @@
 ---
 title: "Bioggio - Iseo - Aranno - Cademario"
 date: 2022-12-27 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

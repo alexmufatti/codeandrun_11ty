@@ -1,7 +1,7 @@
 ---
 title: "10km FL"
 date: 2023-01-16 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

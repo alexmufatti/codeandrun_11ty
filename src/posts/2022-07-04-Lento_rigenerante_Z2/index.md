@@ -1,6 +1,6 @@
 ---
 title: Lento rigenerante Z2
-topics:
+tags:
 - sport
 - running
 categories:

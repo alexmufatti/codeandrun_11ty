@@ -1,7 +1,7 @@
 ---
 title: "Easy Z2"
 date: 2022-12-12 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

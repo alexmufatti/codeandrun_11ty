@@ -2,7 +2,7 @@
 title: 4x2000 recupero attivo (+o-)
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-02-22 13:15:06

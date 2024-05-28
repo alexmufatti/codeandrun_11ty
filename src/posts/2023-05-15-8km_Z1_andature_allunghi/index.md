@@ -1,13 +1,12 @@
 ---
 title: 8km Z1 + andature + allunghi
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-15 13:03:56
 images: ["20230515-activity-map.png"]
-feature: "20230515-activity-map.png"
 activitydata:
   pace: 5:37min/km
   elevation: 30mt

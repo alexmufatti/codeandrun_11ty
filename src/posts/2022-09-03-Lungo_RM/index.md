@@ -1,6 +1,6 @@
 ---
 title: Lungo RM
-topics:
+tags:
 - sport
 - running
 categories:

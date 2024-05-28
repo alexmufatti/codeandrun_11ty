@@ -1,6 +1,6 @@
 ---
 title: 8km FM + defa
-topics:
+tags:
 - sport
 - running
 categories:

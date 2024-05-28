@@ -1,6 +1,6 @@
 ---
 title: Settimana 43
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-10-23 17:48:59
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟡,🟢,🟡]
 trainingFeelings: [🙂,😀,🙂,😀]
+feature: IMG_2500-feature.jpg
 ---
 
 Ancora una settimana tranquilla senza troppi chilometri!

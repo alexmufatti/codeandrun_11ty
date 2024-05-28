@@ -1,13 +1,12 @@
 ---
 title: Salomon Run 2023
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-16 09:40:15
 images: ["20230416-activity-map.png"]
-feature: "IMG_1543.jpg"
 activitydata:
   pace: 5:11min/km
   elevation: 196.2mt

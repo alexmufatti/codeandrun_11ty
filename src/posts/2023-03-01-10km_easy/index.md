@@ -1,13 +1,12 @@
 ---
 title: 10km easy
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-03-01 17:35:20
 images: ["20230301-activity-map.png"]
-feature: "20230301-activity-map.png"
 activitydata:
   pace: 4:54min/km
   elevation: 44mt

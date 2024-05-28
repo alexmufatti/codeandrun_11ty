@@ -1,6 +1,6 @@
 ---
 title: Fondo con un po' di salita
-topics:
+tags:
 - sport
 - running
 categories:

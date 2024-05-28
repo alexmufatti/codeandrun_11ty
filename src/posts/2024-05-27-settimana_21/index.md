@@ -1,6 +1,6 @@
 ---
 title: Settimana 21
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-05-20 16:02:02

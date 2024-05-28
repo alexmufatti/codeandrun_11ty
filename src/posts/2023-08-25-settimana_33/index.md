@@ -1,6 +1,6 @@
 ---
 title: Settimana 33
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-08-14 17:41:52
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡]
 trainingFeelings: [😐,🙂,🙂,🙁]
+feature: IMG_2186-feature.jpg
 ---
 Seconda settimana di vacanza con uscite in posto poco conosciuti. Andata bene e, soprattutto, dopo mesi ho corso con qualcuno!
 <!--more-->

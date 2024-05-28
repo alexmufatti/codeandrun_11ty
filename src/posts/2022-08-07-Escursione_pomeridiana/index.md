@@ -1,6 +1,6 @@
 ---
 title: Escursione pomeridiana 
-topics:
+tags:
 - sport
 - hiking
 categories:

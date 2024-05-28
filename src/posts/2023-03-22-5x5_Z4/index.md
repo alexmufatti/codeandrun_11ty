@@ -1,13 +1,12 @@
 ---
 title: 5x5’ Z4
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-03-22 12:58:46
 images: ["20230322-activity-map.png"]
-feature: "20230322-activity-map.png"
 activitydata:
   pace: 5:11min/km
   elevation: 37mt

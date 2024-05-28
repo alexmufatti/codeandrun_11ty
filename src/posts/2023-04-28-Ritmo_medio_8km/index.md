@@ -1,13 +1,12 @@
 ---
 title: Ritmo medio 8km
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-28 12:56:23
 images: ["20230428-activity-map.png"]
-feature: "20230428-activity-map.png"
 activitydata:
   pace: 4:52min/km
   elevation: 22mt

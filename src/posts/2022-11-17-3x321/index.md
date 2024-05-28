@@ -1,7 +1,7 @@
 ---
 title: "3x(3'+2'+1')"
 date: 2022-11-17 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

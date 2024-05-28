@@ -1,6 +1,6 @@
 ---
 title: Settimana 31
-topics:
+tags:
 - sport
 - running
 categories:
@@ -10,6 +10,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡]
 trainingFeelings: [🙂,🙂,🙂,🙂]
+feature: IMG_2065-EDIT-feature.jpg
 ---
 Settimana di allenamento in Italia; al fresco!
 <!--more--> 

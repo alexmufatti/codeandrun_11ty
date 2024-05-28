@@ -1,7 +1,7 @@
 ---
 title: "10x400m"
 date: 2023-01-17 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

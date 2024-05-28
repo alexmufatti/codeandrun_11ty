@@ -1,6 +1,6 @@
 ---
 title: Progressivo 8+4
-topics:
+tags:
 - sport
 - running
 categories:

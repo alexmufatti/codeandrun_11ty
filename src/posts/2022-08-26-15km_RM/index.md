@@ -1,6 +1,6 @@
 ---
 title: 15km RM
-topics:
+tags:
 - sport
 - running
 categories:

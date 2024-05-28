@@ -2,7 +2,7 @@
 title: 3x5000 abortito
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-03-18 13:02:11

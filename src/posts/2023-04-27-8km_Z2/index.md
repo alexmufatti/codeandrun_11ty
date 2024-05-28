@@ -1,13 +1,12 @@
 ---
 title: 8km Z2
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-27 13:06:59
 images: ["20230427-activity-map.png"]
-feature: "20230427-activity-map.png"
 activitydata:
   pace: 5:20min/km
   elevation: 31mt

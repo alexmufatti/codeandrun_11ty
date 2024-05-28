@@ -1,13 +1,12 @@
 ---
 title: Rigenerante
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-17 12:40:26
 images: ["20230417-activity-map.png"]
-feature: "20230417-activity-map.png"
 activitydata:
   pace: 5:40min/km
   elevation: 34mt

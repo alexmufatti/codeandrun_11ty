@@ -1,6 +1,6 @@
 ---
 title: Escursione mattutina 
-topics:
+tags:
 - sport
 - hiking
 categories: 

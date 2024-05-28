@@ -1,6 +1,6 @@
 ---
 title: Settimana 14
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-04-01 16:47:38
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡,🟢]
 trainingFeelings: [🙂,😀,😐,🙂,🙂]
+feature: IMG_3085_feature.jpg
 ---
 Ultima settimana piena prima dello scarico!
 <!--more-->

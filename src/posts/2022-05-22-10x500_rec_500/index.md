@@ -1,6 +1,6 @@
 ---
 title: 10x500 rec 500
-topics:
+tags:
 - sport
 - running
 categories: 

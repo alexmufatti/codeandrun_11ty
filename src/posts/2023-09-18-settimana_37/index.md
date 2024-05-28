@@ -1,6 +1,6 @@
 ---
 title: Settimana 37
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-09-18 18:31:50
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🔴,🟢,🟢,🔴]
 trainingFeelings: [😭,😭,😭,😀]
+feature: IMG_2326-feature.jpg
 ---
 Settimana di tapering e gara! 
 <!--more--> 

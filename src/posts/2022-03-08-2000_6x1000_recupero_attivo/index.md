@@ -2,7 +2,7 @@
 title: 2000 + 6x1000 recupero attivo
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - ripetute

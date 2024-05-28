@@ -1,6 +1,6 @@
 ---
 title: 10x100 + 3x1000
-topics:
+tags:
 - sport
 - running
 categories: 

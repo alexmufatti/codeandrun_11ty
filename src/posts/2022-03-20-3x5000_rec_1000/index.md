@@ -2,7 +2,7 @@
 title: 3x5000 rec 1000
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - ripetute

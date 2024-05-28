@@ -2,7 +2,7 @@
 title: Fondo lento
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-02-21 13:04:54

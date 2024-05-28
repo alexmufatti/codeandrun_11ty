@@ -1,13 +1,12 @@
 ---
 title: San Clemente
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-03 13:03:40
 images: ["20230403-activity-map.png"]
-feature: "20230403-activity-map.png"
 activitydata:
   pace: 7:22min/km
   elevation: 342mt

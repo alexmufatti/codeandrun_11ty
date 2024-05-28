@@ -1,6 +1,6 @@
 ---
 title: Settimana 19
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-05-06 14:54:47
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢,🟡]
 trainingFeelings: [😀,😀,🙂,😐,😐]
+feature: IMG_3173-feature.jpg
 ---
 Riprendiamo il carico dopo il rallentamento post maratona!
 <!--more--> 

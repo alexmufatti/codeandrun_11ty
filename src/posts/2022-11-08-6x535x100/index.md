@@ -1,7 +1,7 @@
 ---
 title: "6x(5’+3’)+5x100"
 date: 2022-11-08 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

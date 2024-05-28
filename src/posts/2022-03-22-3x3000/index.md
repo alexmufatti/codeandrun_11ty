@@ -2,7 +2,7 @@
 title: 3x3000
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - ripetute

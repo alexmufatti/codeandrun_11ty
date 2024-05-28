@@ -1,13 +1,12 @@
 ---
 title: 14km Z2
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-16 07:21:32
 images: ["20230516-activity-map.png"]
-feature: "IMG_1676.jpg"
 activitydata:
   pace: 5:11min/km
   elevation: 68mt

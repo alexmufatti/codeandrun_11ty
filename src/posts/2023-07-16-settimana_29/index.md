@@ -1,16 +1,16 @@
 ---
 title: Settimana 29
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-07-16 18:20:03
-feature: "IMG_2021-feature.jpg"
 places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢,🔴,🟡]
 trainingFeelings: [😐,🫤,😐,🙂]
+feature: IMG_2021-feature.jpg
 ---
 Settimana con trasferta in italia e un po' di cambi di programma ma nel complesso positiva.
 <!--more--> 

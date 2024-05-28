@@ -1,6 +1,6 @@
 ---
 title: Progressivo
-topics:
+tags:
 - sport
 - running
 categories:

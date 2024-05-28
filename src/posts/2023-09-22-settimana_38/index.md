@@ -1,6 +1,6 @@
 ---
 title: Settimana 38
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-09-19 16:53:03
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢,🟢]
 trainingFeelings: [😀,🙂,🙂]
+feature: IMG_2341-feature.jpg
 ---
 Settimana di recupero post gara
 <!--more-->

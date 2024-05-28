@@ -1,6 +1,6 @@
 ---
 title: Settimana 50
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-12-10 17:15:48
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡]
 trainingFeelings: [🫤,🙂,😀,😀]
+feature: IMG_2793_feature.jpg
 ---
 Settimana dopo le ferie!
 <!--more--> 

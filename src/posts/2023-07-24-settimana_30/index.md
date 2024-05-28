@@ -1,16 +1,16 @@
 ---
 title: Settimana 30
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-07-24 07:47:57
-feature: "IMG_2035_feature.jpg"
 places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡]
 trainingFeelings: [😐, 🙂, 😐, 🫤]
+feature: IMG_2035_feature.jpg
 ---
 Settimana di allenamento piena superando i 50km! Si inizia a macinare!
 

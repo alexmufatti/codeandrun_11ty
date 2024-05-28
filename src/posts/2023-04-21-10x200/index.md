@@ -1,13 +1,12 @@
 ---
 title: 10x200
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-21 13:33:14
 images: ["20230421-activity-map.png"]
-feature: "20230421-activity-map.png"
 activitydata:
   pace: 5:0min/km
   elevation: 22mt

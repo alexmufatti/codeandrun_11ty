@@ -1,6 +1,6 @@
 ---
 title: 10x100  (salita) + 4x1000 rec 1000 (primo post  🦠)
-topics:
+tags:
 - sport
 - running
 categories: 

@@ -1,6 +1,6 @@
 ---
 title: 6x1000
-topics:
+tags:
 - sport
 - running
 categories: 

@@ -1,13 +1,12 @@
 ---
 title: 3x(3’+2’+1’)
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-03-08 12:39:41
 images: ["20230308-activity-map.png"]
-feature: "20230308-activity-map.png"
 activitydata:
   pace: 4:39min/km
   elevation: 38mt

@@ -1,7 +1,7 @@
 ---
 title: "10km FL + 6km FM"
 date: 2023-01-13 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

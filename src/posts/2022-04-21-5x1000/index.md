@@ -1,6 +1,6 @@
 ---
 title: 5x1000
-topics:
+tags:
 - sport
 - running
 categories: 

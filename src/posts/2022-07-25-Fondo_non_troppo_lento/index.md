@@ -1,6 +1,6 @@
 ---
 title: Fondo non troppo lento
-topics:
+tags:
 - sport
 - running
 categories:

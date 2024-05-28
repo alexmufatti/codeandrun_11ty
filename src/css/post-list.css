@@ -24,24 +24,41 @@
 }
 
 .post-list__feature {
-  width: 50%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.post-list__feature__noimage {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: #abb2bf;
+  color: #383e49;
+  text-align: center;
+  padding-top: 40%;
 }
 
 .post-list {
-  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr
+  }
 }
 
 .post-list__item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding: 1rem;
   border-top: 1px solid rgba(230, 230, 230, 1);
+
 }
 
-.post-list__item:last-child {
-  border-bottom: 1px solid rgba(230, 230, 230, 1);
-}
 
 .post-list__title {
   font-size: var(--text-2xl);

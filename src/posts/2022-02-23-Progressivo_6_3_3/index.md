@@ -2,7 +2,7 @@
 title: Progressivo 6+3+3
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-02-23 12:49:52

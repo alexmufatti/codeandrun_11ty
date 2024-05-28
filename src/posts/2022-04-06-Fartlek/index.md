@@ -1,6 +1,6 @@
 ---
 title: Fartlek 
-topics:
+tags:
 - sport
 - running
 categories: 

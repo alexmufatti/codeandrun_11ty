@@ -1,6 +1,6 @@
 ---
 title: 8x500 recupero attivo
-topics:
+tags:
 - sport
 - running
 categories: 

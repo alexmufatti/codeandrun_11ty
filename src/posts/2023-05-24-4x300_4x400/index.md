@@ -1,13 +1,12 @@
 ---
 title: 4x300 + 4x400
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-24 18:52:47
 images: ["20230524-activity-map.png"]
-feature: "20230524-activity-map.png"
 activitydata:
   pace: 4:58min/km
   elevation: 16mt

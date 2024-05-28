@@ -2,7 +2,7 @@
 title: 6+6 con fatica
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - progressivo

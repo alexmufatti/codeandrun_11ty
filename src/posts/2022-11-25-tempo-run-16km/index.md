@@ -1,7 +1,7 @@
 ---
 title: "Tempo run 16km"
 date: 2022-11-25 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

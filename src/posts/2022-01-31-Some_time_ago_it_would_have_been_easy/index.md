@@ -2,7 +2,7 @@
 title: Some time ago it would have been easy
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-01-31 12:52:32

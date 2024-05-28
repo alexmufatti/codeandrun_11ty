@@ -1,6 +1,6 @@
 ---
 title: Bioggio - Breganzona
-topics:
+tags:
 - sport
 - running
 categories:

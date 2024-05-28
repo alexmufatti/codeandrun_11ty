@@ -2,7 +2,7 @@
 title: Lungo progressivo
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - lungo

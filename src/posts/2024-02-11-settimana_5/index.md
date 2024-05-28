@@ -1,6 +1,6 @@
 ---
 title: Settimana 5
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-01-29 18:21:56
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡]
 trainingFeelings: [😭,🙂,🫤,🙂]
+feature: IMG_2967_feature.jpg
 ---
 Settimana di trasferta: inizia la stanchezza che mi porterò dietro per un po'.
 <!--more--> 

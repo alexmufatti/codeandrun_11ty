@@ -1,6 +1,6 @@
 ---
 title: 10x400
-topics:
+tags:
 - sport
 - running
 categories: 

@@ -1,7 +1,7 @@
 ---
 title: "Maraton Valencia Trinidad Alfonso 2022"
 date: 2022-12-04 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

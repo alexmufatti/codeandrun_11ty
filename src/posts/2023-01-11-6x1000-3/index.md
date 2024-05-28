@@ -1,7 +1,7 @@
 ---
 title: "6x1000"
 date: 2023-01-11 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

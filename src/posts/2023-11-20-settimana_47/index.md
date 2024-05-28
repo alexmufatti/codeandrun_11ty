@@ -1,6 +1,6 @@
 ---
 title: Settimana 47
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-11-26 16:03:38
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟡,🟡,🏁]
 trainingFeelings: [🫤,😀,🫤,🫤,😀]
+feature: 0083E59A-9A9E-42F3-B965-138C9F2FBDA6_feature.jpg
 ---
 <!--more-->
 

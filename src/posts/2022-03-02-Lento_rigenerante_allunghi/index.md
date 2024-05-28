@@ -2,7 +2,7 @@
 title: Lento rigenerante + allunghi
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - fondo

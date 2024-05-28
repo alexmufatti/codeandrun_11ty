@@ -1,6 +1,6 @@
 ---
 title: 7km FM (dovevano essere 10 😓) 
-topics:
+tags:
 - sport
 - running
 categories: 

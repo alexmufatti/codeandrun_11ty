@@ -1,6 +1,6 @@
 ---
 title: Lento rigenerante
-topics:
+tags:
 - sport
 - running
 categories: 

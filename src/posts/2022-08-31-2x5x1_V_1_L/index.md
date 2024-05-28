@@ -1,6 +1,6 @@
 ---
 title: 2x5x1’V+1’L
-topics:
+tags:
 - sport
 - running
 categories:

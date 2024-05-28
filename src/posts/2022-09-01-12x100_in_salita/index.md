@@ -1,6 +1,6 @@
 ---
 title: 12x100 in salita
-topics:
+tags:
 - sport
 - running
 categories:

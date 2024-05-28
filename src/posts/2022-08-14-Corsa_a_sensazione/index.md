@@ -1,6 +1,6 @@
 ---
 title: Corsa a sensazione
-topics:
+tags:
 - sport
 - running
 categories:

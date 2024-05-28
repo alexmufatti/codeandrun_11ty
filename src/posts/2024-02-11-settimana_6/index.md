@@ -1,6 +1,6 @@
 ---
 title: Settimana 6
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-02-05 18:22:17
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟡,🟢,🟢,🏁]
 trainingFeelings: [🫤,🙂,🙂,🙂,😀]
+feature: 5B93FBAE-FD1B-4F61-B751-8C3D74D88E64_feature.jpg
 ---
 
 Settimana di _tapering_ pre Mezza di Barcellona!!

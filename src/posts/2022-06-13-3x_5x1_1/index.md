@@ -1,6 +1,6 @@
 ---
 title: 3x(5x1'+1')
-topics:
+tags:
 - sport
 - running
 categories: 

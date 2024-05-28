@@ -1,6 +1,6 @@
 ---
 title: Test 7 minuti
-topics:
+tags:
 - sport
 - running
 categories: 

@@ -1,7 +1,7 @@
 ---
 title: "Lunghissimo 36km RM"
 date: 2022-11-14 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Giro dell'ora di pranzo 
-topics:
+tags:
 - sport
 - cycling
 categories: 

@@ -1,6 +1,6 @@
 ---
 title: Settimana 2
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-01-08 15:08:54
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟡,🟢,🟢,🏁]
 trainingFeelings: [🙂,🫤,🙂,🙂,😀]
+feature: IMG_2943_feature.jpg
 ---
 Settimana di tapering e gara!
 <!--more--> 

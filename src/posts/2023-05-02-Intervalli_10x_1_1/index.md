@@ -1,13 +1,12 @@
 ---
 title: Intervalli 10x(1'+1')
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-02 07:16:18
 images: ["20230502-activity-map.png"]
-feature: "20230502-activity-map.png"
 activitydata:
   pace: 4:48min/km
   elevation: 21mt

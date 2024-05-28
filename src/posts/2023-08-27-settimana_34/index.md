@@ -1,6 +1,6 @@
 ---
 title: Settimana 34
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-08-28 16:37:02
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢]
 trainingFeelings: [😐,😀,🙂,😀]
+feature: IMG_2224-EDIT-feature.jpg
 ---
 Settimana di buoni allenamenti ma purtroppo con un inizio di dolore al ginocchio. 😐
 <!--more--> 

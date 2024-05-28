@@ -1,6 +1,6 @@
 ---
 title: 4km FM + FL
-topics:
+tags:
 - sport
 - running
 categories:

@@ -1,13 +1,12 @@
 ---
 title: Collinare
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-04-09 09:25:26
 images: ["20230409-activity-map.png"]
-feature: "20230409-activity-map.png"
 activitydata:
   pace: 4:56min/km
   elevation: 111mt

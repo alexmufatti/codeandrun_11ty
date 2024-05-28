@@ -1,13 +1,12 @@
 ---
 title: Lunghetto con un po’ di progressione ma più fatica del previsto
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-03-31 13:24:40
 images: ["20230331-activity-map.png"]
-feature: "20230331-activity-map.png"
 activitydata:
   pace: 4:58min/km
   elevation: 50mt

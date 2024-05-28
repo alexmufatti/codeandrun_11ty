@@ -1,16 +1,16 @@
 ---
 title: Settimana 28
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-07-14 14:26:41
-feature: "IMG_1988-feature.jpg"
 places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟡,🟢,🟢]
 trainingFeelings: [😐,😐,😐,🙂]
+feature: IMG_1988-feature.jpg
 ---
 Settimana di ritmi e carico quasi normali ma di sensazioni ancora altalenanti.
 <!--more--> 

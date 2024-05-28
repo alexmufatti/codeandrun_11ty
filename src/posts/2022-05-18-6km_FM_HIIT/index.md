@@ -1,6 +1,6 @@
 ---
 title: 6km FM + HIIT
-topics:
+tags:
 - sport
 - running
 categories: 

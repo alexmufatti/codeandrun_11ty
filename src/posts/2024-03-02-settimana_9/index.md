@@ -1,6 +1,6 @@
 ---
 title: Settimana 9
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-02-26 17:48:16
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢,🟡]
 trainingFeelings: [🙂,🫤,🙂,🙂,🫤]
+feature: IMG_3021_feature.jpg
 ---
 Settimana tranquilla ma un po' affaticata dopo il primo lunghissimo.
 <!--more-->

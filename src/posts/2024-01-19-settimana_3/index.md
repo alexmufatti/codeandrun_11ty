@@ -1,6 +1,6 @@
 ---
 title: Settimana 3
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-01-15 16:49:00
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢,🟢]
 trainingFeelings: [🙂,😐,🙂]
+feature: IMG_5E04602B0968-1_feature.jpg
 ---
 
 Settimana di recupero post mezza maratona di Sitges.

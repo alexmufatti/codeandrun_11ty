@@ -2,7 +2,7 @@
 title: 5x1000 recupero attivo
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-02-11 13:25:12

@@ -1,13 +1,12 @@
 ---
 title: Cursa diagonal 10K
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-21 08:33:39
 images: ["20230521-activity-map.png"]
-feature: "IMG_1693.jpg"
 activitydata:
   pace: 4:6min/km
   elevation: 11mt

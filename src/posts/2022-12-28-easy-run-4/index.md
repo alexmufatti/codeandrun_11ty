@@ -1,7 +1,7 @@
 ---
 title: "Easy run"
 date: 2022-12-28 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

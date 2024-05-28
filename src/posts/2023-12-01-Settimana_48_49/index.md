@@ -1,6 +1,6 @@
 ---
 title: Settimana 48-49
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-12-04 17:15:35
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢,🟢]
 trainingFeelings: [🙂,🙂,🙂,🙂,🙂]
+feature: IMG_5328_feature.jpg
 ---
 Ultima settimana di carico e poi settimana di recupero/ferie!
 <!--more--> 

@@ -1,7 +1,7 @@
 ---
 title: "FP 21km (7+7+7)"
 date: 2022-11-21 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

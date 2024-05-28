@@ -1,6 +1,6 @@
 ---
 title: FP 4+4+4
-topics:
+tags:
 - sport
 - running
 categories:

@@ -2,7 +2,7 @@
 title: Test 5k 21:04
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - test

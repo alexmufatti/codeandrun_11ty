@@ -1,6 +1,6 @@
 ---
 title: Settimana 18
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-04-29 12:38:08
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢]
 trainingFeelings: [🙂,🙂]
+feature: IMG_3150-feature.jpg
 ---
 Settimana di riposo post gara
 <!--more--> 

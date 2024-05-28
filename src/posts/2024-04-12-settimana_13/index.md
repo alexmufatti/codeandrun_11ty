@@ -1,6 +1,6 @@
 ---
 title: Settimana 12-13
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-03-18 16:47:14
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢,🔴,🟢,🟡]
 trainingFeelings: [🙂,🙂,😀,🙂,😐]
+feature: IMG_6198_feature.jpg
 ---
 Settimana di ultimo lunghissimo!
 <!--more--> 

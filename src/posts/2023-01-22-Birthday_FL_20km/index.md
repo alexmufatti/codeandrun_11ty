@@ -1,13 +1,12 @@
 ---
 title: Birthday FL 20km
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-01-22 10:15:49
 images: ["20230122-activity-map.png"]
-feature: "20230122-activity-map.png"
 activitydata:
   pace: 4:47min/km
   elevation: 57mt

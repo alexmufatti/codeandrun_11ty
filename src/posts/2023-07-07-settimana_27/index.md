@@ -1,16 +1,16 @@
 ---
 title: Settimana 27 (prima settimana post stop)
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-07-07 13:19:45
-feature: "IMG_1957-feature.jpg"
 places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢]
 trainingFeelings: [😭,☠️,🙁]
+feature: IMG_1957-feature.jpg
 ---
 Altro stop, questa volta per dolore al ginocchio e due giri di febbre! Prima settimana di ripartenza...
 <!--more--> 

@@ -1,6 +1,6 @@
 ---
 title: Settimana 35
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-08-28 18:47:11
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟡,🟡]
 trainingFeelings: [😭,😭]
+feature: IMG_2250-EDIT-feature.jpg
 ---
 Settimana molto corta purtroppo a causa del dolore al ginocchio esterno sinistro ma con ottimi risultati.
 <!--more--> 

@@ -1,6 +1,6 @@
 ---
 title: 4x1000
-topics:
+tags:
 - sport
 - running
 categories:

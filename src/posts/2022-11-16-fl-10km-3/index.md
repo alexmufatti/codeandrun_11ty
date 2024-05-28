@@ -1,7 +1,7 @@
 ---
 title: "FL 10km"
 date: 2022-11-16 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

@@ -1,6 +1,6 @@
 ---
 title: 3x3000
-topics:
+tags:
 - sport
 - running
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Lungo progressivo
-topics:
+tags:
 - sport
 - running
 categories: 

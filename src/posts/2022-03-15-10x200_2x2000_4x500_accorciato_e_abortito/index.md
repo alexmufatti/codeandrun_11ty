@@ -2,7 +2,7 @@
 title: 10x200 + 2x2000 + 4x500 accorciato e abortito
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - ripetute

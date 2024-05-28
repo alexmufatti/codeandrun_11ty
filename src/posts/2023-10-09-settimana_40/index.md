@@ -1,6 +1,6 @@
 ---
 title: Settimana 40
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-10-02 18:14:08
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🔴,🟢,🟢,🟡]
 trainingFeelings: [😀,😭,😐,😀]
+feature: IMG_2438-feature.jpg
 ---
 Settimana intensa con 2 uscite in trasferta.
 

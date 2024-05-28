@@ -2,7 +2,7 @@
 title: Lento rigenerante
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 date: 2022-02-28 13:22:48

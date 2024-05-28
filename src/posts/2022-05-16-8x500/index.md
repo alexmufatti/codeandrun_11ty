@@ -1,6 +1,6 @@
 ---
 title: 8x500
-topics:
+tags:
 - sport
 - running
 categories: 

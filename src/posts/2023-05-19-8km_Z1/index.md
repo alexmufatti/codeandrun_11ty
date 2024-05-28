@@ -1,13 +1,12 @@
 ---
 title: 8km Z1
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-19 13:30:08
 images: ["20230519-activity-map.png"]
-feature: "20230519-activity-map.png"
 activitydata:
   pace: 5:38min/km
   elevation: 34mt

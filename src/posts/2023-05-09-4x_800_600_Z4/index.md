@@ -1,13 +1,12 @@
 ---
 title: 4x(800+600) Z4
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-09 12:25:37
 images: ["20230509-activity-map.png"]
-feature: "20230509-activity-map.png"
 activitydata:
   pace: 5:15min/km
   elevation: 52mt

@@ -1,6 +1,6 @@
 ---
 title: Settimana 8
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2024-02-19 14:31:43
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢,🟡]
 trainingFeelings: [🙂,🙂,🙂,🙂,😀]
+feature: IMG_3007_feature.jpg
 ---
 Settimana del primo lunghissimo della preparazione!
 <!--more--> 

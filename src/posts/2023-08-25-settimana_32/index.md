@@ -1,6 +1,6 @@
 ---
 title: Settimana 32
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-08-07 17:41:34
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟡]
 trainingFeelings: [🫤,🫤,🙂,🙂]
+feature: IMG_2094-feature.jpg
 ---
 Settimana di corse in vacanza tra appennino (viva il fresco) e liguria (odio il caldo!)
 <!--more--> 

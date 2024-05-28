@@ -1,6 +1,6 @@
 ---
 title: Barcelona Half Marathon
-topics:
+tags:
 - sport
 - running
 categories: 

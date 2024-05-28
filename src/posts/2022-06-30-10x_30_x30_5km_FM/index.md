@@ -1,6 +1,6 @@
 ---
 title: 10x(30"x30") + 5km FM
-topics:
+tags:
 - sport
 - running
 categories: 

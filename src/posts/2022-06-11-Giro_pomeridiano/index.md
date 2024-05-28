@@ -1,6 +1,6 @@
 ---
 title: Giro pomeridiano 
-topics:
+tags:
 - sport
 - cycling
 categories: 

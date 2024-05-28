@@ -1,13 +1,12 @@
 ---
 title: 10km progressivo
-topics:
+tags:
 - sport
 - running
 categories:
   - Sport
 date: 2023-05-12 13:18:27
 images: ["20230512-activity-map.png"]
-feature: "IMG_1642.jpg"
 activitydata:
   pace: 5:13min/km
   elevation: 42mt

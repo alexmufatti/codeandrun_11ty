@@ -1,6 +1,6 @@
 ---
 title: Settimana 36
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-09-04 18:31:33
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟡,🟢,🟡]
 trainingFeelings: [😀,🙂,🙂,🫤]
+feature: IMG_2273-feature.jpg
 ---
 Prima settimana piena dopo la ripresa dall'infortunio. Sembra tutto rientrato.
 <!--more--> 

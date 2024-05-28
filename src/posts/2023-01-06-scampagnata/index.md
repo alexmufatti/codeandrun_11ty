@@ -1,7 +1,7 @@
 ---
 title: "Scampagnata"
 date: 2023-01-06 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

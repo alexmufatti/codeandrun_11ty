@@ -1,7 +1,7 @@
 ---
 title: "FL 6km"
 date: 2022-12-02 00:00:00
-topics:
+tags:
 - sport
 - running
 categories:

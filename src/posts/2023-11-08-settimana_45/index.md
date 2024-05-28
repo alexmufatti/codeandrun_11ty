@@ -1,6 +1,6 @@
 ---
 title: Settimana 45
-topics: ['sport', 'running']
+tags: ['sport', 'running']
 categories:
   - Sport
 date: 2023-11-10 16:03:13
@@ -8,6 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢]
 trainingFeelings: [😐,😐]
+feature: IMG_2545_feature.jpg
 ---
 Settimana di recupero post gara!
 <!--more-->

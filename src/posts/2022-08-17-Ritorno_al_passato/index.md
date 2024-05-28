@@ -1,6 +1,6 @@
 ---
 title: Ritorno al passato
-topics:
+tags:
 - sport
 - running
 categories:

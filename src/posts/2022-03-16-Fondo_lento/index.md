@@ -2,7 +2,7 @@
 title: Fondo lento
 categories: 
   - Sport
-topics: 
+tags: 
 - sport
 - running
 - fondo
