@@ -1,8 +1,12 @@
 ---
 layout: base
+image: /images/me.png
 ---
 
 <header class="hero">
+    <div class="hero_image">
+        <img src="{{ image | url }}" alt="">
+    </div>
   <div class="hero-content">
     <div class="intro">
       {{ content | safe }}

@@ -23,6 +23,10 @@
   margin-bottom: 1rem;
 }
 
+.post-list__feature {
+  width: 50%;
+}
+
 .post-list {
   list-style: none;
 }

@@ -2,12 +2,24 @@
   {% for post in postslist | reverse %}
     <li class="post-list__item">
       <div>
+        <div class="post-list__feature">
+            <a href="{{ post.url }}">
+                {% set imgUrl %}{{ post.url }}{{ post.data.feature }}{% endset %}
+                <img src="{{ imgUrl }}" alt="{{ post.data.title }}" />
+            </a>
+        </div>
         <div class="post-list__meta">
           <time datetime="{{ post.date | htmlDateString }}">
             {{ post.date | readableDate }}
           </time>
           <span> | </span>
           <span>{{ post | readingTime }} read</span>
+          <span> | </span>
+          <span>
+              {% for training in post.data.trainingTypes %}
+                {{ training }}-{{ post.data.trainingFeelings[loop.index0] }}
+              {% endfor %}
+          </span>
         </div>
 
         <div class="post-list__tags">
@@ -23,8 +35,11 @@
       <h3 class="post-list__title">
         <a  href="{{ post.url }}">{{ post.data.title }}</a>
       </h3>
-
-      <p class="post-list__excerpt">{{ post.templateContent | excerpt | safe  }}</p>
+      {% if post.page.excerpt %}
+        <p class="post-list__excerpt">{{ post.page.excerpt | safe  }}</p>
+      {% else %}
+        <p class="post-list__excerpt">{{ post.templateContent | excerpt | safe  }}</p>
+      {% endif %}
 
       <a class="post-list__read-more" href="{{ post.url }}">read article</a>
     </li>

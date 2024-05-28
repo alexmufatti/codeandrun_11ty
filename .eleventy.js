@@ -39,6 +39,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
+  eleventyConfig.addPassthroughCopy("src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/**/*.png");
   eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] });
 
   eleventyConfig.addShortcode('bundledcss', function () {
@@ -53,19 +55,44 @@ module.exports = function (eleventyConfig) {
       : '';
   });
 
+  eleventyConfig.addShortcode('strava', function (id, embed) {
+    return `<div class="embed">
+      <iframe loading="lazy"
+              style="height: 360px; width: 100%; min-width: 360px; max-width: 590px; border: none;"
+              allowTransparency="true"
+              scrolling="no"
+              src="https://www.strava.com/activities/${id}/embed/${embed}"></iframe>
+    </div>
+    <div>
+      <a href="https://strava.com/activities/${id}" target="_blank" rel="noreferrer noopener">
+        <span class="relative inline-block align-text-bottom icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z"/></svg>
+          </span>
+        Link all’attività</a>
+    </div>`
+  });
+
+  eleventyConfig.addShortcode("youtube", function (id, title) {
+    return `
+<iframe class="yt-shortcode" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player${
+        title ? ` for ${title}` : ""
+    }" frameborder="0" allowfullscreen></iframe>
+`;
+  });
+
   eleventyConfig.addFilter('excerpt', (post) => {
     const content = post.replace(/(<([^>]+)>)/gi, '');
     return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
   });
 
   eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
-      'dd LLL yyyy'
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat(
+        'dd LLL yyyy'
     );
   });
 
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
   eleventyConfig.addFilter('dateToIso', (dateString) => {
@@ -128,6 +155,12 @@ module.exports = function (eleventyConfig) {
     }
 
     return content;
+  });
+
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    excerpt_separator: '<!--more-->'
   });
 
   return {

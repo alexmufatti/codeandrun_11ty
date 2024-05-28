@@ -3,3 +3,9 @@ npm-debug.*
 *.log
 .DS_Store
 public
+/.idea/.gitignore
+/.idea/aws.xml
+/.idea/codeandrun_11ty.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
