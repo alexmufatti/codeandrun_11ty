@@ -5,7 +5,7 @@
           {%  if post.data.feature %}
         <div class="post-list__feature">
             <a href="{{ post.url }}">
-                {% set imgUrl %}{{ post.url }}{{ post.data.feature }}{% endset %}
+                {% set imgUrl %}{{ post.url | url }}{{ post.data.feature }}{% endset %}
                 <img src="{{ imgUrl }}" alt="{{ post.data.title }}" />
             </a>
         </div>
@@ -37,7 +37,7 @@
       </div>
 
       <h3 class="post-list__title">
-        <a  href="{{ post.url }}">{{ post.data.title }}</a>
+        <a  href="{{ post.url | url }}">{{ post.data.title }}</a>
       </h3>
       {% if post.page.excerpt %}
         <p class="post-list__excerpt">{{ post.page.excerpt | safe  }}</p>
