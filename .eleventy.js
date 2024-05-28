@@ -9,6 +9,8 @@ const path = require('path');
 const isDev = process.env.ELEVENTY_ENV === 'development';
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
+let pathPrefix = isProd ? '/codeandrun_11ty/' : '';
+
 const manifestPath = path.resolve(
   __dirname,
   'public',
@@ -49,13 +51,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode('bundledcss', function () {
     return manifest['main.css']
-      ? `<link href="${manifest['main.css']}" rel="stylesheet" />`
+      ? `<link href="${pathPrefix}${manifest['main.css']}" rel="stylesheet" />`
       : '';
   });
 
   eleventyConfig.addShortcode('bundledjs', function () {
     return manifest['main.js']
-      ? `<script src="${manifest['main.js']}"></script>`
+      ? `<script src="${pathPrefix}${manifest['main.js']}"></script>`
       : '';
   });
 
@@ -167,6 +169,7 @@ module.exports = function (eleventyConfig) {
     excerpt_separator: '<!--more-->'
   });
 
+
   return {
     dir: {
       input: 'src',
@@ -179,6 +182,6 @@ module.exports = function (eleventyConfig) {
     templateFormats: ['html', 'njk', 'md'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
-    pathPrefix: '/codeandrun_11ty/',
+    pathPrefix: pathPrefix,
   };
 };
