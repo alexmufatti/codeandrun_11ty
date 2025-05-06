@@ -28,11 +28,21 @@ jobs:
           node-version: '18'
           cache: 'npm'
       
+      - name: Cache 11ty images
+        uses: actions/cache@v3
+        with:
+          path: |
+            _site
+            .cache
+          key: ${{ runner.os }}-11ty-cache-${{ hashFiles('**/*.{jpg,jpeg,png,gif,webp,svg}') }}
+          restore-keys: |
+            ${{ runner.os }}-11ty-cache-
+      
       - name: Install dependencies
         run: npm ci
       
       - name: Build
-        run: npm run build
+        run: npm run build:prod
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

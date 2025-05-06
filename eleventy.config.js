@@ -35,7 +35,7 @@ export default async function(eleventyConfig) {
 		if (noEmbed) {
 			return `<a href="https://www.strava.com/activities/${id}">Visualizza attività su Strava</a>`;
 		}
-		return `<iframe src="https://www.strava.com/activities/${id}/embed/${embedId}" width="100%" height="405" frameborder="0" allowtransparency="true"></iframe>
+		return `<div class="strava-embed"><iframe src="https://www.strava.com/activities/${id}/embed/${embedId}" style="height: 360px; width: 100%; min-width: 360px; max-width: 590px; border: none;" frameborder="0" allowtransparency="true"></iframe></div>
 <a href="https://www.strava.com/activities/${id}">Visualizza attività su Strava</a>`;
 	});
 

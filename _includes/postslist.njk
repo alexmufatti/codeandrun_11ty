@@ -17,10 +17,12 @@
       </div>
       {% set types = post.data.trainingTypes or [] %}
       {% set feels = post.data.trainingFeelings or [] %}
-      {% set minlen = [types.length, feels.length] | min %}
+      {% set len_types = types | length %}
+      {% set len_feels = feels | length %}
+      {% set minlen = len_types if len_types < len_feels else len_feels %}
       {% if minlen > 0 %}
-        <div class="postgrid-emoji" style="font-size: 1.5rem; margin-bottom: 0.2rem;">
-          {% for i in (0..minlen-1) %}
+        <div class="postgrid-emoji" style="font-size: 1.15rem; margin-bottom: 0.2rem;">
+          {% for i in range(0, minlen - 1) %}
             {{ types[i] }}{{ feels[i] }}{% if not loop.last %} &middot; {% endif %}
           {% endfor %}
         </div>

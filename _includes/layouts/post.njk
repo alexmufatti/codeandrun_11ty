@@ -4,17 +4,66 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
-<h1>{{ title }}</h1>
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+<div style="margin-bottom: 2.5rem;">
+	<div style="color: #5a6b7a; font-size: 1.2rem; margin-bottom: 0.2rem;">
+		<span>Activities /</span>
+	</div>
+	<h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">{{ title }}</h1>
+	<div style="display: flex; align-items: center; gap: 1.5em; color: #5a6b7a; font-size: 1.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+		<span><i class="fa-solid fa-calendar-days"></i> {{ page.date | readableDate("dd MMMM yyyy") }}</span>
+		{% if duration %}
+			<span><i class="fa-solid fa-stopwatch"></i> {{ duration }} minuto{% if duration != 1 %}i{% endif %}</span>
+		{% endif %}
+	</div>
+	<div style="display: flex; align-items: center; gap: 0.7em; font-size: 2rem; margin-bottom: 0.5rem;">
+		<span><i class="fa-solid fa-person-running"></i></span>
+		{% set types = trainingTypes or [] %}
+		{% set feels = trainingFeelings or [] %}
+		{% set len_types = types | length %}
+		{% set len_feels = feels | length %}
+		{% set minlen = len_types if len_types < len_feels else len_feels %}
+		{% if minlen > 0 %}
+			{% for i in range(0, minlen - 1) %}
+				{{ types[i] }} {{ feels[i] }}{% if not loop.last %} · {% endif %}
+			{% endfor %}
+		{% endif %}
+	</div>
+	<div style="display: flex; gap: 0.7em; margin-bottom: 0.5rem;">
+		{% for tag in tags | filterTagList %}
+			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+			<a href="{{ tagUrl }}" style="background: #f2f6fa; color: #2a3440; border-radius: 0.7em; padding: 0.3em 1em; font-size: 1.3rem; text-decoration: none;">{{ tag }}</a>
+		{% endfor %}
+	</div>
+</div>
 
-{{ content | safe }}
+<div class="post-content-centered narrow-content">
+	{{ content | safe }}
+</div>
+
+<style>
+.narrow-content {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.post-content-centered img {
+	display: block;
+	margin: 2rem auto;
+	width: auto;
+	height: auto;
+}
+.post-content-centered figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.post-content-centered iframe[src*="strava.com"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+</style>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
