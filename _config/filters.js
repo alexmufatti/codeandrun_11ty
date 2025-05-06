@@ -40,4 +40,13 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+
+	eleventyConfig.addFilter("concat", function (arr1, arr2) {
+		return arr1.concat(arr2);
+	});
+
+	eleventyConfig.addFilter("excerpt", content => {
+		if (!content) return "";
+		return content.split("<!--more-->")[0];
+	});
 };

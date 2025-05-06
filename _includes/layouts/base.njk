@@ -6,35 +6,15 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<meta name="generator" content="{{ eleventy.generator }}">
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
-
-		{#-
-		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. CSS:
-			* Add to a per-page bundle using `{% css %}{% endcss %}`
-			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		2. Or for JavaScript:
-			* Add to a per-page bundle using `{% js %}{% endjs %}`
-			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
-		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add an arbitrary string to the bundle #}
-		<style>/* This is an arbitrary CSS string added to the bundle */</style>
-		{#- Add the contents of a file to the bundle #}
 		<style>{% include "css/index.css" %}</style>
-		{#- Or you can add from node_modules #}
-		{# <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style> #}
 
-		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
-		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
@@ -42,7 +22,6 @@
 		<header>
 			<a href="/" class="home-link">{{ metadata.title }}</a>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
@@ -52,6 +31,21 @@
 				</ul>
 			</nav>
 		</header>
+
+		<!-- HEADER BLU CON LOGO, TITOLO, SOTTOTITOLO, SOCIAL E BENVENUTO -->
+		<div style="background: #33587a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3.2rem 0 2.2rem 0; margin-bottom: 2.5rem; min-height: 320px; text-align: center; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+			<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" style="height: 120px; width: 120px; border-radius: 50%; object-fit: contain; margin-bottom: 1.5rem;" />
+			<span style="font-size: 3rem; font-weight: 800; letter-spacing: 1.5px; line-height: 1.1; color: #fff;">{{ metadata.title }}</span>
+			<span style="font-size: 1.3rem; font-weight: 400; color: #b6c7d8; margin-top: 0.5rem; letter-spacing: 0.2px;">{{ metadata.description }}</span>
+			<div class="header-social" style="display: flex; gap: 1.1rem; justify-content: center; align-items: center; margin: 1.2rem 0 0.7rem 0; flex-wrap: wrap;">
+				{% for social in metadata.social %}
+					<a href="{{ social.url }}" target="_blank" rel="noopener" style="color: #eaf6ff; font-size: 1.7rem; opacity: 0.92; transition: opacity 0.2s;" title="{{ social.type|capitalize }}">
+						<i class="{{ social.icon }}"></i>
+					</a>
+				{% endfor %}
+			</div>
+			<div style="font-size: 1.1rem; color: #b6c7d8; margin-top: 0.7rem; max-width: 600px;">{{ metadata.welcome }}</div>
+		</div>
 
 		<main id="skip">
 			<heading-anchors>

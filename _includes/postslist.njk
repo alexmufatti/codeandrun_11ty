@@ -1,8 +1,34 @@
-<ol reversed class="postlist" style="--postlist-index: {{ (postslistCounter or postslist.length) + 1 }}">
-{%- for post in postslist | reverse %}
-	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-	</li>
-{%- endfor %}
-</ol>
+<div class="postgrid">
+  {%- for post in postslist | reverse %}
+    <article class="postgrid-item{% if post.url == url %} postgrid-item-active{% endif %}">
+      <a href="{{ post.url }}">
+        {% if post.data.feature_image %}
+          <img src="{{ post.url }}{{ post.data.feature_image }}" alt="Immagine in evidenza" class="postgrid-thumbnail" />
+        {% endif %}
+      </a>
+      <h2 class="postgrid-title">
+        <a href="{{ post.url }}" style="color: inherit; text-decoration: none;">{{ post.data.title or post.url }}</a>
+      </h2>
+      <div class="postgrid-meta" style="color: #5a6b7a; font-size: 1.05rem; margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.7em; flex-wrap: wrap;">
+        <span><i class="fa-solid fa-calendar-days"></i> {{ post.date | readableDate("dd MMMM yyyy") }}</span>
+        {% if post.data.duration %}
+          <span><i class="fa-solid fa-stopwatch"></i> {{ post.data.duration }}</span>
+        {% endif %}
+      </div>
+      {% if post.data.trainingTypes or post.data.trainingFeelings %}
+        <div class="postgrid-emoji" style="font-size: 1.5rem; margin-bottom: 0.2rem;">
+          {% if post.data.trainingTypes %}
+            <span>{% for emoji in post.data.trainingTypes %}{{ emoji }} {% endfor %}</span>
+          {% endif %}
+          {% if post.data.trainingFeelings %}
+            <span>{% for emoji in post.data.trainingFeelings %}{{ emoji }} {% endfor %}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="postgrid-excerpt" style="margin-bottom: 0.7rem; color: #2a3440; font-size: 1.15rem;">
+        {{ post.templateContent | excerpt | safe }}
+      </div>
+      <a href="{{ post.url }}" class="postgrid-readmore" style="color: #5a6b7a; font-weight: 500; font-size: 1.05rem; text-decoration: none;">Leggi di più &rarr;</a>
+    </article>
+  {%- endfor %}
+</div>

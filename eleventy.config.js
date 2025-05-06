@@ -23,6 +23,29 @@ export default async function(eleventyConfig) {
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
+	eleventyConfig.addShortcode("youtube", ({ id, title }) => {
+		let html = `<iframe src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
+		if (title) {
+			html += `<div class="video-caption">${title}</div>`;
+		}
+		return html;
+	});
+
+	eleventyConfig.addShortcode("strava", ({ id, embedId, noEmbed = false }) => {
+		if (noEmbed) {
+			return `<a href="https://www.strava.com/activities/${id}">Visualizza attività su Strava</a>`;
+		}
+		return `<iframe src="https://www.strava.com/activities/${id}/embed/${embedId}" width="100%" height="405" frameborder="0" allowtransparency="true"></iframe>
+<a href="https://www.strava.com/activities/${id}">Visualizza attività su Strava</a>`;
+	});
+
+	eleventyConfig.addShortcode("figure", ({ src, title = '', alt = '' }) => {
+		return `<figure>
+    <img src="${src}" alt="${alt}">
+    ${title ? `<figcaption>${title}</figcaption>` : ''}
+  </figure>`;
+	});
+
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
@@ -53,7 +76,7 @@ export default async function(eleventyConfig) {
 		preAttributes: { tabindex: 0 }
 	});
 	eleventyConfig.addPlugin(pluginNavigation);
-	eleventyConfig.addPlugin(HtmlBasePlugin);
+	//eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
 	eleventyConfig.addPlugin(feedPlugin, {
@@ -72,11 +95,11 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			title: "Code And Run",
+			subtitle: "Blog of a runner developer",
+			base: "https://codeandrun.it/",
 			author: {
-				name: "Your Name"
+				name: "Alex Mufatti"
 			}
 		}
 	});
