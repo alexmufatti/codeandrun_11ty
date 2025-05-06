@@ -56,9 +56,6 @@ body {
 html {
 	overflow-y: scroll;
 }
-body {
-	max-width: 40em;
-}
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -238,9 +235,11 @@ header {
 
 .postgrid-thumbnail {
 	width: 100%;
+	aspect-ratio: 1/1;
 	height: auto;
 	object-fit: cover;
-	border-radius: 4px;
+	border-radius: 12px;
+	display: block;
 	margin-bottom: 0.75rem;
 }
 

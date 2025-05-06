@@ -15,14 +15,14 @@
           <span><i class="fa-solid fa-stopwatch"></i> {{ post.data.duration }}</span>
         {% endif %}
       </div>
-      {% if post.data.trainingTypes or post.data.trainingFeelings %}
+      {% set types = post.data.trainingTypes or [] %}
+      {% set feels = post.data.trainingFeelings or [] %}
+      {% set minlen = [types.length, feels.length] | min %}
+      {% if minlen > 0 %}
         <div class="postgrid-emoji" style="font-size: 1.5rem; margin-bottom: 0.2rem;">
-          {% if post.data.trainingTypes %}
-            <span>{% for emoji in post.data.trainingTypes %}{{ emoji }} {% endfor %}</span>
-          {% endif %}
-          {% if post.data.trainingFeelings %}
-            <span>{% for emoji in post.data.trainingFeelings %}{{ emoji }} {% endfor %}</span>
-          {% endif %}
+          {% for i in (0..minlen-1) %}
+            {{ types[i] }}{{ feels[i] }}{% if not loop.last %} &middot; {% endif %}
+          {% endfor %}
         </div>
       {% endif %}
       <div class="postgrid-excerpt" style="margin-bottom: 0.7rem; color: #2a3440; font-size: 1.15rem;">
