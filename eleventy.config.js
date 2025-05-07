@@ -90,13 +90,13 @@ export default async function(eleventyConfig) {
 			}
 		},
 		collection: {
-			name: "posts",
+			name: "postsAndActivities", // Updated to include both posts and activities
 			limit: 10,
 		},
 		metadata: {
 			language: "en",
 			title: "Code And Run",
-			subtitle: "Blog of a runner developer",
+			subtitle: "Blog of a running developer",
 			base: "https://codeandrun.it/",
 			author: {
 				name: "Alex Mufatti"
@@ -149,7 +149,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addCollection("postsAndActivities", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("./content/posts/**/*.md").concat(
 			collectionApi.getFilteredByGlob("./content/activities/**/*.md")
-		).sort((a, b) => b.date - a.date);
+		).sort((a, b) => new Date(a.date) - new Date(b.date));
 	});
 };
 

@@ -2,7 +2,7 @@ export default {
 	title: "Code And Run",
 	url: "https://codeandrun.it/",
 	language: "it",
-	description: "A blog of a running developer",
+	description: "Blog of a running developer",
 	author: {
 		name: "Alex Mufatti",
 		email: "alex@codeandrun.it",

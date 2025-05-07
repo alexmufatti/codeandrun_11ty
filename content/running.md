@@ -7,6 +7,27 @@ const eleventyNavigation = {
 
 # Statistiche
 
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+
 | Anno | Distanza | Dislivello | Attività |    Tempo |
 |------|----------|------------|----------|----------|
 | 2024 |  2988 km |    13454 m |      217 | 245h 14m |
