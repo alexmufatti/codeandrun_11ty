@@ -6,31 +6,35 @@
           <img src="{{ post.url }}{{ post.data.feature_image }}" alt="Immagine in evidenza" class="postgrid-thumbnail" />
         {% endif %}
       </a>
-      <h2 class="postgrid-title">
-        <a href="{{ post.url }}" style="color: inherit; text-decoration: none;">{{ post.data.title or post.url }}</a>
-      </h2>
-      <div class="postgrid-meta" style="color: #5a6b7a; font-size: 1.05rem; margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.7em; flex-wrap: wrap;">
-        <span><i class="fa-solid fa-calendar-days"></i> {{ post.date | readableDate("dd MMMM yyyy") }}</span>
-        {% if post.data.duration %}
-          <span><i class="fa-solid fa-stopwatch"></i> {{ post.data.duration }}</span>
-        {% endif %}
-      </div>
-      {% set types = post.data.trainingTypes or [] %}
-      {% set feels = post.data.trainingFeelings or [] %}
-      {% set len_types = types | length %}
-      {% set len_feels = feels | length %}
-      {% set minlen = len_types if len_types < len_feels else len_feels %}
-      {% if minlen > 0 %}
-        <div class="postgrid-emoji" style="font-size: 1.15rem; margin-bottom: 0.2rem;">
-          {% for i in range(0, minlen - 1) %}
-            {{ types[i] }}{{ feels[i] }}{% if not loop.last %} &middot; {% endif %}
-          {% endfor %}
+      <div class="postgrid-content">
+        <h2 class="postgrid-title">
+          <a href="{{ post.url }}" style="color: inherit; text-decoration: none;">{{ post.data.title or post.url }}</a>
+        </h2>
+        <div class="postgrid-meta" style="color: #5a6b7a; font-size: 1.05rem; margin-bottom: 0.2rem; display: flex; align-items: center; gap: 0.7em; flex-wrap: wrap;">
+          <span><i class="fa-solid fa-calendar-days"></i> {{ post.date | readableDate("dd MMMM yyyy") }}</span>
+          {% if post.data.duration %}
+            <span><i class="fa-solid fa-stopwatch"></i> {{ post.data.duration }}</span>
+          {% endif %}
         </div>
-      {% endif %}
-      <div class="postgrid-excerpt" style="margin-bottom: 0.7rem; color: #2a3440; font-size: 1.15rem;">
-        {{ post.templateContent | excerpt | safe }}
+        {% set types = post.data.trainingTypes or [] %}
+        {% set feels = post.data.trainingFeelings or [] %}
+        {% set len_types = types | length %}
+        {% set len_feels = feels | length %}
+        {% set minlen = len_types if len_types < len_feels else len_feels %}
+        {% if minlen > 0 %}
+          <div class="postgrid-emoji" style="font-size: 1.15rem; margin-bottom: 0.2rem;">
+            {% for i in range(0, minlen - 1) %}
+              {{ types[i] }}{{ feels[i] }}{% if not loop.last %} &middot; {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="postgrid-excerpt" style="margin-bottom: 0.7rem; color: #2a3440; font-size: 1.15rem;">
+          {{ post.templateContent | excerpt | safe }}
+        </div>
       </div>
-      <a href="{{ post.url }}" class="postgrid-readmore" style="color: #5a6b7a; font-weight: 500; font-size: 1.05rem; text-decoration: none;">Leggi di più &rarr;</a>
+      <div class="postgrid-footer">
+        <a href="{{ post.url }}" class="postgrid-readmore">Leggi di più &rarr;</a>
+      </div>
     </article>
   {%- endfor %}
 </div>

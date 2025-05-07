@@ -47,6 +47,22 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addFilter("excerpt", content => {
 		if (!content) return "";
-		return content.split("<!--more-->")[0];
+		const parts = content.split("<!--more-->");
+		if (parts.length > 1) {
+			return parts[0];
+		}
+		// Remove images, links and shortcodes from content
+		let cleanContent = content
+			.replace(/!\[.*?\]\(.*?\)/g, '') // Remove markdown images
+			.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Replace markdown links with just the text
+			.replace(/<img.*?>/g, '') // Remove HTML images
+			.replace(/<a\b[^>]*>(.*?)<\/a>/g, '$1') // Replace HTML links with just the text
+			.replace(/\{\%.*?\%\}/gs, '') // Remove shortcodes
+			.replace(/\{\{.*?\}\}/gs, '') // Remove other template tags
+			.replace(/\n\s*\n/g, '\n') // Remove multiple empty lines
+			.trim();
+		// If no <!--more--> tag, limit to 300 characters and add ellipsis
+		const limitedContent = cleanContent.slice(0, 300).trim();
+		return limitedContent + (cleanContent.length > 300 ? "..." : "");
 	});
 };

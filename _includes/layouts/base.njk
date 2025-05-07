@@ -33,8 +33,8 @@
 		</header>
 
 		<!-- HEADER BLU CON LOGO, TITOLO, SOTTOTITOLO, SOCIAL E BENVENUTO -->
-		<div style="background: #33587a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3.2rem 0 2.2rem 0; margin-bottom: 2.5rem; min-height: 320px; text-align: center; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
-			<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" style="height: 120px; width: 120px; border-radius: 50%; object-fit: contain; margin-bottom: 1.5rem;" />
+		<div style="background: #33587a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem 0 1.8rem 0; margin-bottom: 2.5rem; min-height: 320px; text-align: center; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+			<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" />
 			<span style="font-size: 3rem; font-weight: 800; letter-spacing: 1.5px; line-height: 1.1; color: #fff;">{{ metadata.title }}</span>
 			<span style="font-size: 1.3rem; font-weight: 400; color: #b6c7d8; margin-top: 0.5rem; letter-spacing: 0.2px;">{{ metadata.description }}</span>
 			<div class="header-social" style="display: flex; gap: 1.1rem; justify-content: center; align-items: center; margin: 1.2rem 0 0.7rem 0; flex-wrap: wrap;">
@@ -59,5 +59,17 @@
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const header = document.querySelector('header');
+				window.addEventListener('scroll', function() {
+					if (window.scrollY > 0) {
+						header.classList.add('header-scrolled');
+					} else {
+						header.classList.remove('header-scrolled');
+					}
+				});
+			});
+		</script>
 	</body>
 </html>

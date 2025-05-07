@@ -2,9 +2,40 @@
 const eleventyNavigation = {
 	key: "Archive",
 	order: 2
+}
+const pagination = {
+	data: "collections.postsAndActivities",
+	size: 12,
+	alias: "paginatedItems"
 };
 ---
 <h1>Archive</h1>
 
-{% set postslist = collections.posts %}
+{% set postslist = paginatedItems.reverse() %}
 {% include "postslist.njk" %}
+
+<nav class="pagination">
+  {% if pagination.page.previous %}
+  <a href="{{ pagination.href.previous }}">Previous</a>
+  {% endif %}
+
+  <a href="{{ pagination.hrefs[0] }}" {% if pagination.pageNumber == 0 %}aria-current="page"{% endif %}>1</a>
+  {% if pagination.pageNumber > 3 %}
+  <span>...</span>
+  {% endif %}
+
+  {% for pageNumber in range(pagination.pageNumber - 2, pagination.pageNumber + 3) %}
+    {% if pageNumber > 0 and pageNumber < pagination.pages.length - 1 %}
+    <a href="{{ pagination.hrefs[pageNumber] }}" {% if pagination.pageNumber == pageNumber %}aria-current="page"{% endif %}>{{ pageNumber + 1 }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if pagination.pageNumber < pagination.pages.length - 4 %}
+  <span>...</span>
+  {% endif %}
+  <a href="{{ pagination.hrefs[pagination.pages.length - 1] }}" {% if pagination.pageNumber == pagination.pages.length - 1 %}aria-current="page"{% endif %}>{{ pagination.pages.length }}</a>
+
+  {% if pagination.page.next %}
+  <a href="{{ pagination.href.next }}">Next</a>
+  {% endif %}
+</nav>

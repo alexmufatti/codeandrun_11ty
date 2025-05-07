@@ -1,6 +1,9 @@
 /* Defaults */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: 'Inter', -apple-system, system-ui, sans-serif;
+	--font-family-heading: 'Space Grotesk', -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -52,6 +55,7 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	padding-top: 1.8rem;
 }
 html {
 	overflow-y: scroll;
@@ -94,6 +98,7 @@ p:last-child {
 }
 p {
 	line-height: 1.5;
+	font-size: 0.95rem;
 }
 
 li {
@@ -120,7 +125,23 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	z-index: 1000;
+	transition: box-shadow 0.3s ease;
+}
+
+header.header-scrolled {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .links-nextprev {
@@ -181,8 +202,9 @@ header {
 }
 .home-link {
 	flex-grow: 1;
-	font-size: 1em; /* 16px /16 */
+	font-size: 1em;
 	font-weight: 700;
+	font-family: var(--font-family-heading);
 }
 .home-link:link:not(:hover) {
 	text-decoration: none;
@@ -225,12 +247,62 @@ header {
 }
 
 .postgrid-item {
-	border: 1px solid #ddd;
 	padding: 1rem;
-	border-radius: 6px;
+	border-radius: 12px;
 	background: #fff;
 	display: flex;
 	flex-direction: column;
+	min-height: 400px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease;
+}
+
+.postgrid-item:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.postgrid-content {
+	flex-grow: 1;
+}
+
+.postgrid-excerpt code {
+	word-break: break-word;
+	white-space: normal;
+	overflow-wrap: break-word;
+}
+
+.postgrid-excerpt pre {
+	display: none;
+}
+
+.postgrid-footer {
+	margin-top: auto;
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 1rem;
+}
+
+.postgrid-readmore {
+	color: #666;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
+.postgrid-readmore:hover {
+	color: var(--text-color-link-active);
+	text-decoration: underline;
+}
+
+.postgrid-item a[href] {
+	color: #666;
+	text-decoration: none;
+}
+
+.postgrid-item a[href]:hover,
+.postgrid-item a[href]:active {
+	color: var(--text-color-link-active);
+	text-decoration: underline;
 }
 
 .postgrid-thumbnail {
@@ -241,22 +313,32 @@ header {
 	border-radius: 12px;
 	display: block;
 	margin-bottom: 0.75rem;
+	transition: transform 0.3s ease;
+}
+
+.postgrid-thumbnail:hover {
+	transform: scale(1.05);
 }
 
 .postgrid-title {
 	font-size: 1.1rem;
 	margin: 0.5rem 0 0.25rem;
+	font-family: var(--font-family-heading);
+	font-weight: 600;
 }
 
 .postgrid-date {
 	font-size: 0.875rem;
-	color: #666;
+	color: #888;
 }
 
 .header-logo {
 	background: none !important;
-	box-shadow: 0 4px 24px #0006;
-	border: 6px solid transparent;
+	box-shadow: none;
+	border: none;
+	height: 200px;
+	width: 200px;
+	object-fit: contain;
 }
 
 .header-social a {
@@ -292,4 +374,73 @@ main {
 	display: flex;
     justify-content: center;
     margin-bottom: 1.25rem;
+}
+
+blockquote {
+	margin: 1.5rem 0;
+	padding: 0.5rem 0 0.5rem 1.5rem;
+	border-left: 4px solid var(--text-color-link);
+	font-style: italic;
+	color: #555;
+}
+
+blockquote p {
+	margin: 0;
+}
+
+nav.pagination {
+	margin-top: 2rem;
+}
+
+/* Pagination styles */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-gray-50);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--text-color-link);
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a[aria-current="page"] {
+  background-color: var(--text-color-link);
+  color: #fff;
+  font-weight: 600;
+}
+
+nav a[aria-current="page"]:visited {
+  color: #fff;
+}
+
+nav a:hover {
+  background-color: var(--color-gray-20);
+}
+
+nav span {
+  padding: 0.5rem;
+  color: var(--color-gray-50);
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  nav a {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  nav span {
+    font-size: 0.85rem;
+  }
 }
