@@ -210,6 +210,69 @@ header {
 	text-decoration: none;
 }
 
+/* Styles for the header section */
+.header-blue {
+    background: #33587a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 1.8rem 0;
+    margin-bottom: 2.5rem;
+    min-height: 320px;
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.header-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #b6c7d8;
+    margin-top: 0.5rem;
+    letter-spacing: 0.2px;
+}
+
+.header-social {
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0 0.7rem 0;
+    flex-wrap: wrap;
+}
+
+.header-social a {
+    color: #eaf6ff;
+    font-size: 1.7rem;
+    opacity: 0.92;
+    transition: opacity 0.2s;
+}
+
+.header-social a:visited {
+    color: inherit;
+}
+
+.header-welcome {
+    font-size: 1.1rem;
+    color: #b6c7d8;
+    margin-top: 0.7rem;
+    max-width: 600px;
+}
+
 /* Nav */
 .nav {
 	display: flex;
@@ -443,4 +506,61 @@ nav span {
   nav span {
     font-size: 0.85rem;
   }
+}
+
+/* Footer styles */
+.footer {
+    background: rgb(228, 233, 240);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.footer a {
+    margin-right: 1rem;
+    color: #007acc;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer img {
+    border-width: 0;
+    vertical-align: middle;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Post list styles */
+.postgrid-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.postgrid-meta {
+    color: #5a6b7a;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    flex-wrap: wrap;
+}
+
+.postgrid-emoji {
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+}
+
+.postgrid-emoji i {
+    color: #5a6b7a;
+}
+
+.postgrid-excerpt {
+    margin-bottom: 0.7rem;
+    color: #2a3440;
+    font-size: 1.15rem;
 }

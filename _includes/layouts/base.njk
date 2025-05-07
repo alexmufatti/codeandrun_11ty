@@ -35,19 +35,19 @@
 		
 		{% if not r/\/(posts|activities)(\/|$)/.test(page.url) %}
 			<!-- HEADER BLU CON LOGO, TITOLO, SOTTOTITOLO, SOCIAL E BENVENUTO -->
-			<div style="background: #33587a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem 0 1.8rem 0; margin-bottom: 2.5rem; min-height: 320px; text-align: center; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
-				<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" />
-				<span style="font-size: 3rem; font-weight: 800; letter-spacing: 1.5px; line-height: 1.1; color: #fff;">{{ metadata.title }}</span>
-				<span style="font-size: 1.3rem; font-weight: 400; color: #b6c7d8; margin-top: 0.5rem; letter-spacing: 0.2px;">{{ metadata.description }}</span>
-				<div class="header-social" style="display: flex; gap: 1.1rem; justify-content: center; align-items: center; margin: 1.2rem 0 0.7rem 0; flex-wrap: wrap;">
-					{% for social in metadata.social %}
-						<a href="{{ social.url }}" target="_blank" rel="noopener" style="color: #eaf6ff; font-size: 1.7rem; opacity: 0.92; transition: opacity 0.2s;" title="{{ social.type|capitalize }}">
-							<i class="{{ social.icon }}"></i>
-						</a>
-					{% endfor %}
+				<div class="header-blue">
+					<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" />
+					<span class="header-title">{{ metadata.title }}</span>
+					<span class="header-subtitle">{{ metadata.description }}</span>
+					<div class="header-social">
+						{% for social in metadata.social %}
+							<a href="{{ social.url }}" target="_blank" rel="noopener" title="{{ social.type|capitalize }}">
+								<i class="{{ social.icon }}"></i>
+							</a>
+						{% endfor %}
+					</div>
+					<div class="header-welcome">{{ metadata.welcome }}</div>
 				</div>
-				<div style="font-size: 1.1rem; color: #b6c7d8; margin-top: 0.7rem; max-width: 600px;">{{ metadata.welcome }}</div>
-			</div>
 		{% endif %}
 		<main id="skip">
 			<heading-anchors>
@@ -55,9 +55,19 @@
 			</heading-anchors>
 		</main>
 
-		<footer>
-			<p><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
-		</footer>
+			<footer class="footer">
+				<a href="https://www.iubenda.com/privacy-policy/14439811/cookie-policy" title="">
+					<span>Cookies</span>
+				</a>
+				<a href="https://www.iubenda.com/privacy-policy/14439811" title="">
+					<span>Privacy</span>
+				</a>
+				<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+					<img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+				</a>
+				<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+				<p>Creato con ❤️ & {{ eleventy.generator }} & tema custom & Copilot</p>
+			</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
