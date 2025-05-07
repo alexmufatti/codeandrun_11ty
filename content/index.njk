@@ -13,7 +13,7 @@ const numberOfLatestPostsToShow = 12;
 
 {% set postsCount = allItems | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h1>Ultimi {{ latestPostsCount }} Articoli</h1>
 
 {% set postslist = allItems | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -21,7 +21,7 @@ const numberOfLatestPostsToShow = 12;
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
+<p>Puoi trovare {{ morePosts }} altri articoli <a href="blog.njk">nell'archivio</a>.</p>
 {% endif %}
 
 {# List every content page in the project #}

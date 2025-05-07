@@ -7,6 +7,7 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
+		<meta property="og:image" content="{% if page.url == '/' %}/img/homepage-og-image.png{% else %}{{ page.url + feature_image if feature_image else '/img/default-og-image.png' }}{% endif %}">
 
 		<style>{% include "css/index.css" %}</style>
 
@@ -17,6 +18,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	</head>
 	<body>
+
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		
