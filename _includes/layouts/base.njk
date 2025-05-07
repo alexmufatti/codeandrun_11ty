@@ -19,6 +19,7 @@
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
+		
 		<header>
 			<a href="/" class="home-link">{{ metadata.title }}</a>
 
@@ -31,22 +32,23 @@
 				</ul>
 			</nav>
 		</header>
-
-		<!-- HEADER BLU CON LOGO, TITOLO, SOTTOTITOLO, SOCIAL E BENVENUTO -->
-		<div style="background: #33587a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem 0 1.8rem 0; margin-bottom: 2.5rem; min-height: 320px; text-align: center; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
-			<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" />
-			<span style="font-size: 3rem; font-weight: 800; letter-spacing: 1.5px; line-height: 1.1; color: #fff;">{{ metadata.title }}</span>
-			<span style="font-size: 1.3rem; font-weight: 400; color: #b6c7d8; margin-top: 0.5rem; letter-spacing: 0.2px;">{{ metadata.description }}</span>
-			<div class="header-social" style="display: flex; gap: 1.1rem; justify-content: center; align-items: center; margin: 1.2rem 0 0.7rem 0; flex-wrap: wrap;">
-				{% for social in metadata.social %}
-					<a href="{{ social.url }}" target="_blank" rel="noopener" style="color: #eaf6ff; font-size: 1.7rem; opacity: 0.92; transition: opacity 0.2s;" title="{{ social.type|capitalize }}">
-						<i class="{{ social.icon }}"></i>
-					</a>
-				{% endfor %}
+		
+		{% if not r/\/(posts|activities)(\/|$)/.test(page.url) %}
+			<!-- HEADER BLU CON LOGO, TITOLO, SOTTOTITOLO, SOCIAL E BENVENUTO -->
+			<div style="background: #33587a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem 0 1.8rem 0; margin-bottom: 2.5rem; min-height: 320px; text-align: center; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+				<img src="/img/avatar4.png" alt="Logo blog" class="header-logo" />
+				<span style="font-size: 3rem; font-weight: 800; letter-spacing: 1.5px; line-height: 1.1; color: #fff;">{{ metadata.title }}</span>
+				<span style="font-size: 1.3rem; font-weight: 400; color: #b6c7d8; margin-top: 0.5rem; letter-spacing: 0.2px;">{{ metadata.description }}</span>
+				<div class="header-social" style="display: flex; gap: 1.1rem; justify-content: center; align-items: center; margin: 1.2rem 0 0.7rem 0; flex-wrap: wrap;">
+					{% for social in metadata.social %}
+						<a href="{{ social.url }}" target="_blank" rel="noopener" style="color: #eaf6ff; font-size: 1.7rem; opacity: 0.92; transition: opacity 0.2s;" title="{{ social.type|capitalize }}">
+							<i class="{{ social.icon }}"></i>
+						</a>
+					{% endfor %}
+				</div>
+				<div style="font-size: 1.1rem; color: #b6c7d8; margin-top: 0.7rem; max-width: 600px;">{{ metadata.welcome }}</div>
 			</div>
-			<div style="font-size: 1.1rem; color: #b6c7d8; margin-top: 0.7rem; max-width: 600px;">{{ metadata.welcome }}</div>
-		</div>
-
+		{% endif %}
 		<main id="skip">
 			<heading-anchors>
 				{{ content | safe }}

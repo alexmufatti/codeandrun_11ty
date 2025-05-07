@@ -23,6 +23,7 @@
         {% set minlen = len_types if len_types < len_feels else len_feels %}
         {% if minlen > 0 %}
           <div class="postgrid-emoji" style="font-size: 1.15rem; margin-bottom: 0.2rem;">
+            <i class="fa-solid fa-running" style="color: #5a6b7a;"></i>
             {% for i in range(0, minlen - 1) %}
               {{ types[i] }}{{ feels[i] }}{% if not loop.last %} &middot; {% endif %}
             {% endfor %}
