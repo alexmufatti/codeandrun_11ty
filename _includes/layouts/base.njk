@@ -7,7 +7,7 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
-		<meta property="og:image" content="/img/default-og-image.png">
+		<meta property="og:image" content="{{ metadata.url }}/img/default-og-image.png">
 
 		<style>{% include "css/index.css" %}</style>
 
