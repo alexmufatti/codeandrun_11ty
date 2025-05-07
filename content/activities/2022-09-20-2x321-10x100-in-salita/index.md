@@ -2,7 +2,7 @@
 title: 2x(3'+2'+1') + 10x100 in salita
 date: 2022-09-20 00:00:00
 tags:
-- running
+- Running
 - Sport
 - variazioni
 ---

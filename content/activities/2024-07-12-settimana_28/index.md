@@ -2,7 +2,7 @@
 title: Settimana 28
 topics:
 - Sport
-- running
+- Running
 date: 2024-07-08 15:24:25
 places: []
 trainingTypes:

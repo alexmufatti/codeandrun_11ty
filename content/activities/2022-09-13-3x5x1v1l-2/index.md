@@ -2,7 +2,7 @@
 title: 3x5x1'V+1'L
 date: 2022-09-13 00:00:00
 tags:
-- running
+- Running
 - Sport
 - variazioni
 ---

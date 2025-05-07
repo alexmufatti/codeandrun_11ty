@@ -2,7 +2,7 @@
 title: 5x(5’+3’) + 10x100 in salita
 date: 2022-10-04 00:00:00
 tags:
-- running
+- Running
 - Sport
 - variazioni
 ---

@@ -3,7 +3,7 @@ title: 20x100 in salita
 date: 2022-09-14 00:00:00
 tags:
 - ripetute
-- running
+- Running
 - Sport
 ---
 

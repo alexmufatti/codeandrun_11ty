@@ -3,7 +3,7 @@ title: RM 27km
 date: 2022-10-07 00:00:00
 tags:
 - lungo-maratona
-- running
+- Running
 - Sport
 ---
 

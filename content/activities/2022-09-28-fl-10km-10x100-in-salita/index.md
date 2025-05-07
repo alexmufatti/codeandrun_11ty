@@ -3,7 +3,7 @@ title: FL 10km + 10x100 in salita
 date: 2022-09-28 00:00:00
 tags:
 - fondo-lento
-- running
+- Running
 - Sport
 ---
 

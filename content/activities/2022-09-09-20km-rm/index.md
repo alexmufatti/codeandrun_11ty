@@ -3,7 +3,7 @@ title: 20km RM
 date: 2022-09-09 00:00:00
 tags:
 - lungo-maratona
-- running
+- Running
 - Sport
 ---
 

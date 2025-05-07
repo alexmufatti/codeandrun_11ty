@@ -2,7 +2,7 @@
 title: 3x(3’+2’+1’ rec. 3'+2'+1')
 date: 2022-10-25 00:00:00
 tags:
-- running
+- Running
 - Sport
 - variazioni
 ---

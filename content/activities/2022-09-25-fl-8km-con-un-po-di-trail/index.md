@@ -3,7 +3,7 @@ title: FL 8km con un po’ di trail
 date: 2022-09-25 00:00:00
 tags:
 - fondo-lento
-- running
+- Running
 - Sport
 ---
 

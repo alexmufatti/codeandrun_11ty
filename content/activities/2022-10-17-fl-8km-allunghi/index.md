@@ -3,7 +3,7 @@ title: FL 8km + allunghi
 date: 2022-10-17 00:00:00
 tags:
 - fondo-lento
-- running
+- Running
 - Sport
 ---
 

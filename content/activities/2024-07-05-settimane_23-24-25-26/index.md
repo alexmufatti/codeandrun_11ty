@@ -2,7 +2,7 @@
 title: Settimane 23-24-25-26
 topics:
 - Sport
-- running
+- Running
 date: 2024-06-03 15:56:01
 places: []
 feature_image: IMG_3295_feature.jpg

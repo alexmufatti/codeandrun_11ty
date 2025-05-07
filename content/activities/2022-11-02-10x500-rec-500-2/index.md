@@ -3,7 +3,7 @@ title: 10x500 rec. 500
 date: 2022-11-02 00:00:00
 tags:
 - ripetute
-- running
+- Running
 - Sport
 ---
 

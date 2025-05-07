@@ -3,7 +3,7 @@ title: Lungo 24km RM
 date: 2022-09-23 00:00:00
 tags:
 - lungo-maratona
-- running
+- Running
 - Sport
 ---
 

@@ -2,7 +2,7 @@
 title: Settimana 26-27
 topics:
 - Sport
-- running
+- Running
 date: 2024-06-24 17:24:55
 places: []
 trainingTypes:

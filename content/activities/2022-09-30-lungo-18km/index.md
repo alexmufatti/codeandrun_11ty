@@ -3,7 +3,7 @@ title: Lungo 18km
 date: 2022-09-30 00:00:00
 tags:
 - fondo-lento
-- running
+- Running
 - Sport
 ---
 

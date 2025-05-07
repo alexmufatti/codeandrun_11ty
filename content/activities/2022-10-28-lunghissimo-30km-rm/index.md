@@ -3,7 +3,7 @@ title: Lunghissimo 30km RM
 date: 2022-10-28 00:00:00
 tags:
 - lungo-maratona
-- running
+- Running
 - Sport
 ---
 

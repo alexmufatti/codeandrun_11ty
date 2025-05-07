@@ -2,7 +2,7 @@
 title: Settimana 30
 topics:
 - Sport
-- running
+- Running
 date: 2024-07-22 12:04:51
 places: []
 trainingTypes:

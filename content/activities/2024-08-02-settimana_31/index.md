@@ -2,7 +2,7 @@
 title: Settimana 31
 topics:
 - Sport
-- running
+- Running
 date: 2024-07-29 17:39:36
 places: []
 trainingTypes:

@@ -3,7 +3,7 @@ title: 3x4000 rec. 1000
 date: 2022-10-21 00:00:00
 tags:
 - ripetute
-- running
+- Running
 - Sport
 ---
 

@@ -3,7 +3,7 @@ title: 10km FL
 date: 2022-11-04 00:00:00
 tags:
 - fondo-lento
-- running
+- Running
 - Sport
 ---
 

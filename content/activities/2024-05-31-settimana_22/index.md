@@ -2,7 +2,7 @@
 title: Settimana 22
 topics:
 - Sport
-- running
+- Running
 date: 2024-05-27 16:32:43
 places: []
 trainingTypes:

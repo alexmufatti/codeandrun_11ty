@@ -2,7 +2,7 @@
 title: Settimana 29
 topics:
 - Sport
-- running
+- Running
 date: 2024-07-15 16:29:01
 places: []
 trainingTypes:

@@ -3,7 +3,7 @@ title: 4x2000 RM
 date: 2022-09-11 00:00:00
 tags:
 - ripetute
-- running
+- Running
 - Sport
 ---
 

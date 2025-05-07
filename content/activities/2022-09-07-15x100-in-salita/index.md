@@ -3,7 +3,7 @@ title: 15x100 in salita
 date: 2022-09-07 00:00:00
 tags:
 - ripetute
-- running
+- Running
 - Sport
 ---
 

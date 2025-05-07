@@ -3,7 +3,7 @@ title: Easy run
 date: 2022-10-13 00:00:00
 tags:
 - fondo-lento
-- running
+- Running
 - Sport
 ---
 
