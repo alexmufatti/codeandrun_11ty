@@ -1,0 +1,86 @@
+
+
+/* Styles for the post layout */
+
+.narrow-content {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.post-content-centered img {
+	display: block;
+	margin: 2rem auto;
+	width: auto;
+	height: auto;
+}
+.post-content-centered figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.post-content-centered iframe[src*="strava.com"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.post-header {
+	background-color: var(--color-accent);;
+    color: #fff;
+	padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.post-header-inner {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.post-title {
+	font-size: 3rem;
+	font-weight: 800;
+	margin-bottom: 0.5rem;
+}
+
+.post-meta {
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.post-meta-icon {
+	color: #fff;
+}
+
+.post-types {
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	color: #fff;
+}
+
+.post-tags {
+	display: flex;
+	gap: 0.7em;
+	margin-bottom: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.post-tag {
+	background: #fff;
+	color: var(--color-accent);;
+	border-radius: 0;
+	padding: 0.3em 1em;
+	font-size: 1.3rem;
+	text-decoration: none;
+    text-transform: capitalize;
+}
+
+a[href]:visited.post-tag {
+	color: var(--color-accent);;
+}
