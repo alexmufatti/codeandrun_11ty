@@ -24,7 +24,7 @@ layout: layouts/base.njk
 		{% set len_feels = feels | length %}
 		{% set minlen = len_types if len_types < len_feels else len_feels %}
 		{% if minlen > 0 %}
-			{% for i in range(0, minlen - 1) %}
+			{% for i in range(0, minlen) %}
 				{{ types[i] }} {{ feels[i] }}{% if not loop.last %} · {% endif %}
 			{% endfor %}
 		{% endif %}

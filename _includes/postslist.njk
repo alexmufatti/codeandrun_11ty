@@ -24,7 +24,7 @@
         {% if minlen > 0 %}
           <div class="postgrid-emoji">
             <i class="fa-solid fa-running"></i>
-            {% for i in range(0, minlen - 1) %}
+            {% for i in range(0, minlen) %}
               {{ types[i] }}{{ feels[i] }}{% if not loop.last %} &middot; {% endif %}
             {% endfor %}
           </div>
