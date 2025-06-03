@@ -97,6 +97,10 @@ main :first-child {
 	padding-left: 1rem;
 }
 
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
 header {
 	display: flex;
 	gap: 1em;
@@ -160,18 +164,6 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
-}
-
-/* Header */
-
-.home-link {
-	flex-grow: 1;
-	font-size: 1em;
-	font-weight: 700;
-	font-family: var(--font-family-heading);
-}
-.home-link:link:not(:hover) {
-	text-decoration: none;
 }
 
 /* Styles for the header section */
