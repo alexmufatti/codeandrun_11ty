@@ -13,10 +13,6 @@
 	box-sizing: border-box;
 }
 
-@view-transition {
-	navigation: auto;
-}
-
 html,
 body {
 	padding: 0;
@@ -24,7 +20,6 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
-	padding-top: 1.8rem;
 }
 html {
 	overflow-y: scroll;
@@ -93,6 +88,15 @@ main :first-child {
 	margin-top: 0;
 }
 
+.home-link {
+	color: var(--text-color-link);
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-decoration: none;
+	padding-top: 1rem;
+	padding-left: 1rem;
+}
+
 header {
 	display: flex;
 	gap: 1em;
@@ -100,10 +104,8 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1em;
-	position: fixed;
+	position: sticky;
 	top: 0;
-	left: 0;
-	right: 0;
 	background: var(--background-color);
 	z-index: 1000;
 	transition: box-shadow 0.3s ease;
@@ -161,14 +163,7 @@ code {
 }
 
 /* Header */
-header {
-	display: flex;
-	gap: 1em;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1em;
-}
+
 .home-link {
 	flex-grow: 1;
 	font-size: 1em;
@@ -181,7 +176,7 @@ header {
 
 /* Styles for the header section */
 .header-blue {
-    background: var(--color-accent);;
+    background: var(--color-accent);
     color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -233,6 +228,21 @@ header {
 
 .header-social a:visited {
     color: inherit;
+}
+
+.header-logo {
+	background: none !important;
+	box-shadow: none;
+	border: none;
+	height: 200px;
+	width: 200px;
+	object-fit: contain;
+}
+
+.header-social a:hover {
+	color: #ffd700;
+	opacity: 1;
+	transform: scale(1.18) rotate(-8deg);
 }
 
 .header-welcome {
@@ -362,27 +372,6 @@ header {
 .postgrid-date {
 	font-size: 0.875rem;
 	color: var(--color-gray-90);
-}
-
-.header-logo {
-	background: none !important;
-	box-shadow: none;
-	border: none;
-	height: 200px;
-	width: 200px;
-	object-fit: contain;
-}
-
-.header-social a {
-	color: var(--background-color);
-	opacity: 0.92;
-	font-size: 1.7rem;
-	transition: color 0.2s, opacity 0.2s, transform 0.2s;
-}
-.header-social a:hover {
-	color: #ffd700;
-	opacity: 1;
-	transform: scale(1.18) rotate(-8deg);
 }
 
 main {

@@ -8,12 +8,12 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
 		<meta property="og:image" content="{{ metadata.url }}img/default-og-image.png">
-		
+
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<script defer src="https://analytics.alexmufatti.it/script.js" data-website-id="6f9a3439-f0ec-4a2d-9939-1ac2372deaf4"></script>
-		
+
 		<style>{% include "css/colors.css" %}</style>
 		<style>{% include "css/index.css" %}</style>
 
@@ -25,8 +25,10 @@
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
+		<div class="home-link" >
+			<a href="/">{{ metadata.title }}</a>
+		</div>
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
@@ -37,7 +39,7 @@
 			</nav>
 			<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
 		</header>
-		
+
 		{% if not r/\/(posts|activities)(\/|$)/.test(page.url) %}
 			<!-- HEADER BLU CON LOGO, TITOLO, SOTTOTITOLO, SOCIAL E BENVENUTO -->
 				<div class="header-blue">
