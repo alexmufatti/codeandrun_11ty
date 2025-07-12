@@ -8,7 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟢,🟢,🟢,🔴,🟢,🟢,🟢]
 trainingFeelings: [😭,😭,😭,😭,😭,😭,😭,🫤]
-feature_image:
+feature_image: IMG_5074_feature.JPG
 ---
 Iniziamo la _road to Chicago 2025_!
 <!--more-->

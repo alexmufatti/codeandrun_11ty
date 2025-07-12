@@ -8,7 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🔴,🟢,🟢,🟡]
 trainingFeelings: [🙂,🙂,😐,😐,🙂]
-feature_image:
+feature_image: IMG_5114_feature.jpg
 ---
 Settimana bella tosta con 70km sulle gambe!
 <!--more-->
@@ -55,7 +55,10 @@ Gambe ancora dure e poco brillanti ma questa Z2 è andata (un terzo in Z3 ma las
 
 {% figure { src: '20250710-activity-map.png', title:'map' } %}
 {% strava { id:'15071437498', embedId:'b68e637f8274762a268f6c50eb4e49c4457004f8' } %}
+
+
 ## Quinta uscita
+
 14km Z3.
 
 {% youtube { id: 'X8gdk9taeEE' } %}
