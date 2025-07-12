@@ -58,6 +58,8 @@ Gambe ancora dure e poco brillanti ma questa Z2 è andata (un terzo in Z3 ma las
 ## Quinta uscita
 14km Z3.
 
+{% youtube { id: 'X8gdk9taeEE' } %}
+
 Visto il caldo avevo un po' paura di questa Z3.
 
 {% figure { src: 'IMG_5122.JPG' } %}
