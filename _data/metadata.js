@@ -13,7 +13,7 @@ export default {
 		{ type: "email", url: "mailto:alex@codeandrun.it", icon: "fa-solid fa-envelope" },
 		{ type: "dev", url: "https://dev.to/alexmufatti", icon: "fa-brands fa-dev" },
 		{ type: "github", url: "https://github.com/alexmufatti", icon: "fa-brands fa-github" },
-		{ type: "instagram", url: "https://instagram.com/alexmufatti", icon: "fa-brands fa-instagram" },
+		{ type: "instagram", url: "https://www.instagram.com/_codeandrun_", icon: "fa-brands fa-instagram" },
 		{ type: "linkedin", url: "https://linkedin.com/in/amufatti", icon: "fa-brands fa-linkedin" },
 		{ type: "mastodon", url: "https://mastodon.uno/@alexmufatti", icon: "fa-brands fa-mastodon" },
 		{ type: "reddit", url: "https://reddit.com/user/alexmufatti", icon: "fa-brands fa-reddit" },
