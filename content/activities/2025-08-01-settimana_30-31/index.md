@@ -8,7 +8,7 @@ places: []
 # 🔴,🟢,🟡,😀,🙁,🫤,🙂,😐,😭,☠️
 trainingTypes: [🟢,🟡,🟢,🟢,🟢,🟢,🔴,🟢,🟢,🟡]
 trainingFeelings: [🙂,🫤,😐,😐,🙂,🙂,🙂,🙂,😐,😀]
-feature_image: IMG_5205_feature.jpg
+feature_image: IMG_5164_feature.jpg
 ---
 Iniziano gli allenamenti in trasferta!
 <!--more-->
