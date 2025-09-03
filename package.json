@@ -1,7 +1,7 @@
 {
-	"name": "eleventy-base-blog",
+	"name": "codeandrun-blog",
 	"version": "9.0.0",
-	"description": "A starter repository for a blog web site using the Eleventy site generator.",
+	"description": "Code and run blog repository.",
 	"type": "module",
 	"scripts": {
 		"build": "npx @11ty/eleventy --quiet",
@@ -16,38 +16,32 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/11ty/eleventy-base-blog.git"
+		"url": "https://github.com/alexmufatti/codeandrun_11ty"
 	},
 	"author": {
-		"name": "Zach Leatherman",
-		"email": "zachleatherman@gmail.com",
-		"url": "https://zachleat.com/"
+		"name": "Alex Mufatti",
+		"email": "me@alexmufatti.it",
+		"url": "https://alexmufatti.it/"
 	},
 	"license": "MIT",
 	"engines": {
 		"node": ">=18"
 	},
-	"funding": {
-		"type": "opencollective",
-		"url": "https://opencollective.com/11ty"
-	},
-	"bugs": {
-		"url": "https://github.com/11ty/eleventy-base-blog/issues"
-	},
-	"homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+	"homepage": "https://codeandrun.it",
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.0-beta.1",
-		"@11ty/eleventy-img": "^6.0.2",
+		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-navigation": "^1.0.4",
-		"@11ty/eleventy-plugin-rss": "^2.0.3",
-		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-		"cross-env": "^7.0.3",
-		"luxon": "^3.6.1",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+		"cross-env": "^10.0.0",
+		"luxon": "^3.7.1",
 		"prismjs": "^1.30.0",
-		"zod": "^3.24.3",
-		"zod-validation-error": "^3.4.0"
+		"zod": "^4.1.5",
+		"zod-validation-error": "^4.0.1"
 	},
 	"dependencies": {
+		"@11ty/eleventy-upgrade-help": "^3.0.1",
 		"@zachleat/heading-anchors": "^1.0.3"
 	}
 }

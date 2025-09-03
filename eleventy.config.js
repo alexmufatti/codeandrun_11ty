@@ -1,4 +1,4 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import { IdAttributePlugin, InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
@@ -9,7 +9,7 @@ import pluginFilters from "./_config/filters.js";
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
-	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+	eleventyConfig.addPreprocessor("drafts", "*", (data) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
@@ -24,7 +24,7 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
 	eleventyConfig.addShortcode("youtube", ({ id, title }) => {
-		let html = `<iframe src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
+		let html = `<iframe src="https://www.youtube.com/embed/${id}" allowfullscreen></iframe>`;
 		if (title) {
 			html += `<div class="video-caption">${title}</div>`;
 		}
@@ -35,7 +35,7 @@ export default async function(eleventyConfig) {
 		if (noEmbed) {
 			return `<a href="https://www.strava.com/activities/${id}">Visualizza attività su Strava</a>`;
 		}
-		return `<div class="strava-embed"><iframe src="https://www.strava.com/activities/${id}/embed/${embedId}" style="height: 360px; width: 100%; min-width: 360px; max-width: 590px; border: none;" frameborder="0" allowtransparency="true"></iframe></div>
+		return `<div class="strava-embed"><iframe src="https://www.strava.com/activities/${id}/embed/${embedId}" style="height: 360px; width: 100%; min-width: 360px; max-width: 590px; border: none;" allowtransparency="true"></iframe></div>
 <a href="https://www.strava.com/activities/${id}">Visualizza attività su Strava</a>`;
 	});
 
