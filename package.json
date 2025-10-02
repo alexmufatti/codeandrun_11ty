@@ -12,7 +12,10 @@
 		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"migrate:test": "node test-migration.js",
+		"migrate:wordpress": "node migrate-to-wordpress.js",
+		"migrate:fix-images": "node fix-image-paths.js"
 	},
 	"repository": {
 		"type": "git",
@@ -35,6 +38,7 @@
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
 		"cross-env": "^10.0.0",
+		"glob": "^11.0.3",
 		"luxon": "^3.7.1",
 		"prismjs": "^1.30.0",
 		"zod": "^4.1.5",

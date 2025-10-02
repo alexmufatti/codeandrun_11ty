@@ -1,0 +1,125 @@
+{
+  "posts": [
+    {
+      "file": "bello/index.md",
+      "title": "N/A",
+      "date": "2024-03-18 12:44:52",
+      "tags": [],
+      "hasShortcodes": {
+        "figure": false,
+        "strava": false,
+        "youtube": false
+      },
+      "contentLength": 70
+    },
+    {
+      "file": "2013-12-20-cinnamon-screenshot-applet-default-folder/index.md",
+      "title": "Cinnamon screenshot applet default folder",
+      "date": "2013-12-20 21:54:50",
+      "tags": [
+        "Linux"
+      ],
+      "hasShortcodes": {
+        "figure": false,
+        "strava": false,
+        "youtube": false
+      },
+      "contentLength": 789
+    },
+    {
+      "file": "2013-12-19-calling-js-class-methods-from-silverlight-application/index.md",
+      "title": "Calling JS class methods from Silverlight application",
+      "date": "2013-12-19 21:18:05",
+      "tags": [
+        "Programming"
+      ],
+      "hasShortcodes": {
+        "figure": false,
+        "strava": false,
+        "youtube": false
+      },
+      "contentLength": 820
+    }
+  ],
+  "activities": [
+    {
+      "file": "2025-09-20-settimana_38/index.md",
+      "title": "Settimana 38",
+      "date": "2025-09-15 13:10:18",
+      "trainingTypes": [
+        "🟢",
+        "🔴",
+        "🟢",
+        "🟢",
+        "🟢"
+      ],
+      "trainingFeelings": [
+        "🙂",
+        "🙂",
+        "🙂",
+        "🙂",
+        "😀"
+      ],
+      "hasShortcodes": {
+        "figure": true,
+        "strava": true,
+        "youtube": false
+      },
+      "contentLength": 1708
+    },
+    {
+      "file": "2025-09-13-settimana_37/index.md",
+      "title": "Settimana 37",
+      "date": "2025-09-08 14:00:17",
+      "trainingTypes": [
+        "🟢",
+        "🔴",
+        "🟢",
+        "🟢",
+        "🟡"
+      ],
+      "trainingFeelings": [
+        "😀",
+        "🙂",
+        "😐",
+        "🙂",
+        "😭"
+      ],
+      "hasShortcodes": {
+        "figure": true,
+        "strava": true,
+        "youtube": false
+      },
+      "contentLength": 2007
+    },
+    {
+      "file": "2025-09-06-settimana_36/index.md",
+      "title": "Settimana 36",
+      "date": "2025-09-01 09:28:46",
+      "trainingTypes": [
+        "🟢",
+        "🔴",
+        "🟢",
+        "🟡"
+      ],
+      "trainingFeelings": [
+        "🙂",
+        "🙂",
+        "😐",
+        "😐"
+      ],
+      "hasShortcodes": {
+        "figure": true,
+        "strava": true,
+        "youtube": false
+      },
+      "contentLength": 1669
+    }
+  ],
+  "shortcodes": {
+    "figure": 3,
+    "strava": 3,
+    "youtube": 0
+  },
+  "errors": []
+}

@@ -1,0 +1,234 @@
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  🚀 MIGRAZIONE ELEVENTY → WORDPRESS COMPLETATA                     │
+│                                                                     │
+│  Blog: Code and Run (https://codeandrun.it)                        │
+│  Data: 2 Ottobre 2025                                              │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+📦 COSA È STATO CREATO
+═══════════════════════════════════════════════════════════════════════
+
+1. SCRIPT DI MIGRAZIONE
+   ├── migrate-to-wordpress.js   ⭐ Script principale migrazione
+   ├── test-migration.js          🧪 Script di test
+   └── package.json               ✅ Aggiornato con nuovi comandi
+
+2. PLUGIN WORDPRESS
+   └── wordpress-plugin/
+       ├── codeandrun-companion.php  🔌 Plugin principale
+       ├── assets/style.css          🎨 Stili CSS
+       └── README.md                 📖 Documentazione plugin
+
+3. DOCUMENTAZIONE
+   ├── WORDPRESS-MIGRATION.md     📘 Quick Start (leggi questo primo!)
+   ├── MIGRATION-GUIDE.md         📗 Guida completa passo-passo
+   └── MIGRATION-CHECKLIST.md     ✅ Checklist interattiva
+
+═══════════════════════════════════════════════════════════════════════
+🎯 PROSSIMI PASSI (IN ORDINE)
+═══════════════════════════════════════════════════════════════════════
+
+STEP 1: Test della Migrazione
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  $ npm run migrate:test
+
+  Cosa fa:
+  ✓ Testa il parser su 3 post + 3 activities
+  ✓ Verifica conversione shortcodes
+  ✓ Genera report in test-migration/
+
+  Output: test-migration/test-report.json
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: Migrazione Completa
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  $ npm run migrate:wordpress
+
+  Cosa fa:
+  ✓ Legge TUTTI i post (~80)
+  ✓ Legge TUTTE le activities (~500+)
+  ✓ Estrae tutte le immagini
+  ✓ Converte shortcodes Eleventy → WordPress
+  ✓ Genera file WXR per WordPress
+
+  Output:
+  ├── wordpress-migration/wordpress-export.xml  ⬅️ IMPORTA QUESTO
+  ├── wordpress-migration/images/               ⬅️ CARICA QUESTE
+  └── wordpress-migration/migration-report.json ⬅️ LEGGI QUESTO
+
+  ⏱️  Tempo stimato: 1-2 minuti
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3: Prepara WordPress
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  A. Installa Plugin WordPress Importer
+     WordPress Admin → Plugin → Aggiungi nuovo
+     Cerca: "WordPress Importer"
+     Installa e Attiva
+
+  B. Installa Plugin Code and Run Companion
+     Via FTP/SSH:
+     $ scp -r wordpress-plugin/ user@server:/wp-content/plugins/codeandrun-companion/
+
+     Poi attiva da WordPress Admin → Plugin
+
+  C. Configura Permalink
+     Settings → Permalinks → "Post name" → Salva
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4: Importa Contenuti
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  A. Importa Posts e Activities
+     Tools → Import → WordPress → "Run Importer"
+     Carica: wordpress-migration/wordpress-export.xml
+     ✅ Spunta: "Download and import file attachments"
+     Submit
+
+  B. Carica Immagini
+     Via FTP:
+     $ scp -r wordpress-migration/images/* \
+       user@server:/wp-content/uploads/eleventy-images/
+
+  ⏱️  Tempo stimato: 5-15 minuti
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 5: Verifica
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Controlla:
+  ✓ Posts → All Posts (dovrebbero essere ~80)
+  ✓ Activities → All Activities (dovrebbero essere ~500+)
+  ✓ Apri alcuni post: immagini visibili
+  ✓ Apri alcune activities: shortcodes Strava funzionanti
+  ✓ Verifica custom fields: training_types, training_feelings
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+═══════════════════════════════════════════════════════════════════════
+📚 DOCUMENTAZIONE DETTAGLIATA
+═══════════════════════════════════════════════════════════════════════
+
+Per maggiori dettagli, consulta:
+
+1. WORDPRESS-MIGRATION.md
+   └─ Quick start e panoramica generale
+
+2. MIGRATION-GUIDE.md
+   └─ Guida passo-passo completa (60+ sezioni)
+      • Troubleshooting
+      • Template personalizzati
+      • Ottimizzazione performance
+      • SEO e redirect
+
+3. MIGRATION-CHECKLIST.md
+   └─ Checklist interattiva (12 fasi)
+      • Stampa e spunta mentre procedi
+      • Non dimenticare nessun passaggio
+
+4. wordpress-plugin/README.md
+   └─ Documentazione plugin WordPress
+      • Come usare shortcodes
+      • Creare template custom
+      • Query activities
+      • Widget e hook
+
+═══════════════════════════════════════════════════════════════════════
+📊 STATISTICHE PREVISTE
+═══════════════════════════════════════════════════════════════════════
+
+Il tuo blog contiene:
+  • Post tecnici:        ~80 (2006-2025)
+  • Activities running:  ~500+ (2019-2025)
+  • Immagini totali:     ~1000+
+  • Tags unici:          ~50+
+  • Shortcodes Strava:   ~500+
+  • Shortcodes Figure:   ~1000+
+
+Tempo totale migrazione: 1-2 ore (inclusa personalizzazione)
+
+═══════════════════════════════════════════════════════════════════════
+🎁 FEATURES PLUGIN WORDPRESS
+═══════════════════════════════════════════════════════════════════════
+
+Code and Run Companion aggiunge:
+
+✅ Custom Post Type "Activity"
+   └─ Gestione dedicata attività running
+   └─ Menu admin separato
+   └─ Supporto Gutenberg
+
+✅ Custom Fields
+   └─ training_types (emoji: 🟢🔴🟡)
+   └─ training_feelings (emoji: 😀🙂😭)
+   └─ places (lista luoghi)
+
+✅ Shortcodes
+   └─ [strava id="123" embed_id="abc"]
+   └─ [youtube id="VIDEO_ID"]
+
+✅ Stili CSS inclusi
+   └─ Design responsive
+   └─ Layout ottimizzato activities
+
+═══════════════════════════════════════════════════════════════════════
+💡 TIPS IMPORTANTI
+═══════════════════════════════════════════════════════════════════════
+
+1. TESTA PRIMA
+   └─ Usa npm run migrate:test prima della migrazione completa
+
+2. BACKUP
+   └─ Mantieni il sito Eleventy funzionante durante la migrazione
+
+3. STAGING
+   └─ Prova su ambiente di test prima di andare in produzione
+
+4. GRADUALE
+   └─ Migra prima i post, poi le activities se hai problemi
+
+5. MONITORING
+   └─ Usa Google Search Console per monitorare 404 post-migrazione
+
+═══════════════════════════════════════════════════════════════════════
+🐛 PROBLEMI COMUNI E SOLUZIONI
+═══════════════════════════════════════════════════════════════════════
+
+Problema: Immagini non visualizzate
+Soluzione: chmod 755 wp-content/uploads/ && wp media regenerate
+
+Problema: Shortcodes Strava non funzionano
+Soluzione: Verifica plugin attivo + script JS caricato (console)
+
+Problema: Custom Post Type non visibile
+Soluzione: Settings → Permalinks → Salva (flush rewrite rules)
+
+Problema: Import WXR troppo grande
+Soluzione: Aumenta upload_max_filesize in php.ini a 128M
+
+═══════════════════════════════════════════════════════════════════════
+📞 SUPPORTO
+═══════════════════════════════════════════════════════════════════════
+
+Se incontri problemi:
+
+1. Controlla wordpress-migration/migration-report.json
+2. Leggi sezione Troubleshooting in MIGRATION-GUIDE.md
+3. Verifica log WordPress: wp-content/debug.log
+4. Console browser: cerca errori JavaScript
+
+═══════════════════════════════════════════════════════════════════════
+
+                          🎉 BUONA MIGRAZIONE! 🎉
+
+                    Made with ❤️ for Code and Run
+                      https://codeandrun.it
+
+═══════════════════════════════════════════════════════════════════════
