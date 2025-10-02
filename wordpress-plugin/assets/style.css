@@ -65,3 +65,15 @@ figure.wp-block-image figcaption {
     font-size: 0.9em;
     font-style: italic;
 }
+
+/* Gutenberg Editor Styles for Activity Meta Panel */
+.activity-training-details-panel .components-base-control {
+    margin-bottom: 1.5rem;
+}
+
+.activity-training-details-panel .components-base-control__help {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #757575;
+}

@@ -42,6 +42,12 @@ Ogni Activity può avere:
 - **training_feelings**: Emoji che rappresentano le sensazioni (😀 ottimo, 🙂 buono, 😭 difficile)
 - **places**: Lista di luoghi dove si è svolta l'attività
 
+**Accesso in Gutenberg:**
+
+I custom fields sono completamente integrati nell'editor Gutenberg! Quando modifichi un'Activity, troverai un pannello laterale chiamato **"Training Details"** nella barra destra dell'editor (Document settings).
+
+I campi sono anche esposti nella REST API di WordPress, quindi sono accessibili per sviluppi headless.
+
 ### 📺 Shortcodes
 
 #### Strava Embed
@@ -105,14 +111,51 @@ Parametri:
 
 ### Visualizzare Activities nel Template
 
-#### Nel Loop
+Il plugin include funzioni helper per usare facilmente i custom fields nei template.
+
+#### Modo Veloce (Funzione All-in-One)
+
+```php
+<?php
+// Visualizza TUTTI i meta fields in un box formattato
+codeandrun_the_activity_meta();
+?>
+```
+
+#### Funzioni Specifiche
+
+```php
+<?php
+// Singole funzioni per ogni campo
+codeandrun_the_training_types();    // 🟢 🔴 🟢
+codeandrun_the_training_feelings(); // 😭 😀 🙂
+codeandrun_the_places();            // Lugano, Monte Brè
+
+// Ottieni valori (senza stampare)
+$types = codeandrun_get_training_types();
+$feelings = codeandrun_get_training_feelings();
+$places = codeandrun_get_places();
+
+// Verifica se ci sono meta fields
+if (codeandrun_has_activity_meta()) {
+    // Mostra qualcosa
+}
+?>
+```
+
+**Vedi [TEMPLATE-USAGE.md](TEMPLATE-USAGE.md) per esempi completi e casi d'uso avanzati.**
+
+#### Nel Loop (Metodo Base)
 
 ```php
 <?php
 if (have_posts()) :
     while (have_posts()) : the_post();
         if (get_post_type() == 'activity') {
-            // È un'activity
+            // Metodo veloce
+            codeandrun_the_activity_meta();
+
+            // O metodo base
             $training_types = get_post_meta(get_the_ID(), 'training_types', true);
             echo '<div class="training-types">' . esc_html($training_types) . '</div>';
         }

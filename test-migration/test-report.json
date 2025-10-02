@@ -43,6 +43,31 @@
   ],
   "activities": [
     {
+      "file": "2025-09-29-settimana_38-39/index.md",
+      "title": "Settimana 38-39",
+      "date": "2025-09-15 19:51:11",
+      "trainingTypes": [
+        "🟢",
+        "🔴",
+        "🟢",
+        "🟢",
+        "🟢"
+      ],
+      "trainingFeelings": [
+        "😭",
+        "😀",
+        "🙂",
+        "🙂",
+        "😭"
+      ],
+      "hasShortcodes": {
+        "figure": true,
+        "strava": true,
+        "youtube": false
+      },
+      "contentLength": 2186
+    },
+    {
       "file": "2025-09-20-settimana_38/index.md",
       "title": "Settimana 38",
       "date": "2025-09-15 13:10:18",
@@ -66,31 +91,6 @@
         "youtube": false
       },
       "contentLength": 1708
-    },
-    {
-      "file": "2025-09-13-settimana_37/index.md",
-      "title": "Settimana 37",
-      "date": "2025-09-08 14:00:17",
-      "trainingTypes": [
-        "🟢",
-        "🔴",
-        "🟢",
-        "🟢",
-        "🟡"
-      ],
-      "trainingFeelings": [
-        "😀",
-        "🙂",
-        "😐",
-        "🙂",
-        "😭"
-      ],
-      "hasShortcodes": {
-        "figure": true,
-        "strava": true,
-        "youtube": false
-      },
-      "contentLength": 2007
     },
     {
       "file": "2025-09-06-settimana_36/index.md",

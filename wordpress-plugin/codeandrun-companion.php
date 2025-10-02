@@ -14,6 +14,9 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+// Include template functions
+require_once plugin_dir_path(__FILE__) . 'template-functions.php';
+
 class CodeAndRun_Companion {
 
     private static $instance = null;
@@ -26,9 +29,13 @@ class CodeAndRun_Companion {
     }
 
     private function __construct() {
+        // Theme support
+        add_action('after_setup_theme', array($this, 'add_theme_support'));
+
         // Register hooks
         add_action('init', array($this, 'register_custom_post_types'));
         add_action('init', array($this, 'register_taxonomies'));
+        add_action('init', array($this, 'register_meta_fields'));
         add_action('add_meta_boxes', array($this, 'add_activity_meta_boxes'));
         add_action('save_post_activity', array($this, 'save_activity_meta'), 10, 2);
 
@@ -39,8 +46,24 @@ class CodeAndRun_Companion {
         // Enqueue styles
         add_action('wp_enqueue_scripts', array($this, 'enqueue_styles'));
 
+        // Enqueue Gutenberg editor assets
+        add_action('enqueue_block_editor_assets', array($this, 'enqueue_editor_assets'));
+
         // Merge posts and activities in main query
         add_action('pre_get_posts', array($this, 'merge_posts_and_activities'));
+    }
+
+    /**
+     * Add theme support for features needed by the plugin
+     */
+    public function add_theme_support() {
+        // Enable post thumbnails (featured images)
+        add_theme_support('post-thumbnails');
+
+        // Custom image sizes for activities
+        add_image_size('activity-thumbnail', 400, 300, true);    // For archive/list views
+        add_image_size('activity-hero', 1200, 600, true);        // For single activity header
+        add_image_size('activity-card', 600, 400, true);         // For card layouts
     }
 
     /**
@@ -92,6 +115,44 @@ class CodeAndRun_Companion {
     public function register_taxonomies() {
         // Potresti voler registrare taxonomy personalizzate per i luoghi, tipi di allenamento, etc.
         // Per ora usiamo le taxonomy standard (tags, categories)
+    }
+
+    /**
+     * Register meta fields for Gutenberg/REST API
+     */
+    public function register_meta_fields() {
+        // Training Types
+        register_post_meta('activity', 'training_types', array(
+            'type' => 'string',
+            'description' => __('Training intensity types (emoji)', 'codeandrun-companion'),
+            'single' => true,
+            'show_in_rest' => true,
+            'auth_callback' => function() {
+                return current_user_can('edit_posts');
+            }
+        ));
+
+        // Training Feelings
+        register_post_meta('activity', 'training_feelings', array(
+            'type' => 'string',
+            'description' => __('Training feelings (emoji)', 'codeandrun-companion'),
+            'single' => true,
+            'show_in_rest' => true,
+            'auth_callback' => function() {
+                return current_user_can('edit_posts');
+            }
+        ));
+
+        // Places
+        register_post_meta('activity', 'places', array(
+            'type' => 'string',
+            'description' => __('Training places', 'codeandrun-companion'),
+            'single' => true,
+            'show_in_rest' => true,
+            'auth_callback' => function() {
+                return current_user_can('edit_posts');
+            }
+        ));
     }
 
     /**
@@ -242,6 +303,31 @@ class CodeAndRun_Companion {
             array(),
             '1.0.0'
         );
+    }
+
+    /**
+     * Enqueue Gutenberg editor assets
+     */
+    public function enqueue_editor_assets() {
+        $screen = get_current_screen();
+
+        // Carica solo per il post type 'activity'
+        if ($screen && $screen->post_type === 'activity') {
+            wp_enqueue_script(
+                'codeandrun-activity-meta',
+                plugin_dir_url(__FILE__) . 'assets/activity-meta.js',
+                array('wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data'),
+                '1.0.0',
+                true
+            );
+
+            wp_enqueue_style(
+                'codeandrun-editor',
+                plugin_dir_url(__FILE__) . 'assets/style.css',
+                array('wp-edit-blocks'),
+                '1.0.0'
+            );
+        }
     }
 
     /**

@@ -15,6 +15,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { glob } from 'glob';
+import { marked } from 'marked';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -74,6 +75,14 @@ class MigrationStats {
 }
 
 const stats = new MigrationStats();
+
+// Configura marked per output WordPress-friendly
+marked.setOptions({
+  gfm: true, // GitHub Flavored Markdown
+  breaks: true, // Converti line breaks in <br>
+  headerIds: false, // Non aggiungere ID agli header
+  mangle: false, // Non modificare email addresses
+});
 
 // Parser del front matter
 function parseFrontMatter(content) {
@@ -145,38 +154,71 @@ function parseFrontMatter(content) {
   return { metadata, content: bodyContent };
 }
 
-// Converti shortcodes Eleventy in HTML/shortcodes WordPress
+// Converti shortcodes Eleventy in HTML/shortcodes WordPress + Markdown to HTML
 function convertShortcodes(content, basePath) {
   let converted = content;
   const imageReferences = [];
 
-  // {% figure { src:'image.jpg', title:'Caption' } %}
+  // PLACEHOLDER per proteggere HTML e shortcodes dalla conversione markdown
+  // Usiamo un placeholder che non verrà interpretato da marked: commento HTML
+  const placeholders = [];
+  let placeholderIndex = 0;
+
+  // Proteggi {% figure %} - supporta sia ' che "
   converted = converted.replace(
-    /\{% figure \{ src: ?['"]([^'"]+)['"](?:, title: ?['"]([^'"]+)['"])? ?\} %\}/g,
+    /\{%\s*figure\s*\{\s*src:\s*['"]([^'"]+)['"](?:\s*,\s*title:\s*['"]([^'"]+)['"])?\s*\}\s*%\}/g,
     (match, src, title) => {
       imageReferences.push(src);
       const alt = title || '';
       const caption = title ? `<figcaption>${escapeXml(title)}</figcaption>` : '';
-      return `<figure class="wp-block-image"><img src="${src}" alt="${escapeXml(alt)}" />${caption}</figure>`;
+      const html = `<figure class="wp-block-image"><img src="${src}" alt="${escapeXml(alt)}" />${caption}</figure>`;
+      const placeholder = `<!--PLACEHOLDER_${placeholderIndex}-->`;
+      placeholders[placeholderIndex] = html;
+      placeholderIndex++;
+      return placeholder;
     }
   );
 
-  // {% strava { id:'123', embedId:'abc' } %}
+  // Proteggi {% strava %} - supporta sia ' che " e noEmbed opzionale
   converted = converted.replace(
-    /\{% strava \{ id: ?['"]([^'"]+)['"](?:, embedId: ?['"]([^'"]+)['"])? ?\} %\}/g,
+    /\{%\s*strava\s*\{\s*id:\s*['"]([^'"]+)['"](?:\s*,\s*embedId:\s*['"]([^'"]+)['"])?(?:\s*,\s*noEmbed:\s*(?:true|false))?\s*\}\s*%\}/g,
     (match, id, embedId) => {
-      // WordPress shortcode compatibile
-      return `[strava id="${id}" embed_id="${embedId || ''}"]`;
+      const shortcode = `[strava id="${id}" embed_id="${embedId || ''}"]`;
+      const placeholder = `<!--PLACEHOLDER_${placeholderIndex}-->`;
+      placeholders[placeholderIndex] = shortcode;
+      placeholderIndex++;
+      return placeholder;
     }
   );
 
-  // {% youtube { id:'videoId', title:'Title' } %}
+  // Proteggi {% youtube %} - supporta sia ' che "
   converted = converted.replace(
-    /\{% youtube \{ id: ?['"]([^'"]+)['"](?:, title: ?['"]([^'"]+)['"])? ?\} %\}/g,
+    /\{%\s*youtube\s*\{\s*id:\s*['"]([^'"]+)['"](?:\s*,\s*title:\s*['"]([^'"]+)['"])?\s*\}\s*%\}/g,
     (match, id, title) => {
-      return `[youtube id="${id}"]`;
+      const shortcode = `[youtube id="${id}"]`;
+      const placeholder = `<!--PLACEHOLDER_${placeholderIndex}-->`;
+      placeholders[placeholderIndex] = shortcode;
+      placeholderIndex++;
+      return placeholder;
     }
   );
+
+  // CONVERTI MARKDOWN IN HTML
+  try {
+    // marked.parse converte tutto il markdown in HTML
+    converted = marked.parse(converted);
+
+    // Ripristina i placeholder (commenti HTML) con l'HTML/shortcode originale
+    placeholders.forEach((html, index) => {
+      // I commenti HTML vengono preservati da marked, quindi basta sostituirli
+      converted = converted.replace(
+        new RegExp(`<!--PLACEHOLDER_${index}-->`, 'g'),
+        html
+      );
+    });
+  } catch (error) {
+    console.warn('Warning: markdown conversion failed for content, using as-is');
+  }
 
   return { content: converted, imageReferences };
 }
@@ -220,6 +262,10 @@ async function processMarkdownFile(filePath, type = 'post') {
     const dirName = path.dirname(filePath);
     const { content: convertedContent, imageReferences } = convertShortcodes(bodyContent, dirName);
 
+    // Estrai lo slug dalla cartella (es: "2025-09-20-settimana_38" diventa "2025-09-20-settimana_38")
+    // La cartella è il parent del file index.md
+    const folderName = path.basename(dirName);
+
     // Copia immagini
     for (const imgRef of imageReferences) {
       if (!imgRef.startsWith('http')) {
@@ -232,13 +278,17 @@ async function processMarkdownFile(filePath, type = 'post') {
       }
     }
 
-    // Cerca feature_image
+    // Gestisci feature_image
+    let featuredImageUrl = null;
     if (metadata.feature_image) {
       const imgPath = path.join(dirName, metadata.feature_image);
       if (fs.existsSync(imgPath)) {
-        const imgDest = path.join(CONFIG.imagesDir, path.basename(imgPath));
+        const imgBasename = path.basename(imgPath);
+        const imgDest = path.join(CONFIG.imagesDir, imgBasename);
         fs.copyFileSync(imgPath, imgDest);
         stats.images++;
+        // URL WordPress per featured image
+        featuredImageUrl = `/wp-content/uploads/eleventy-images/${imgBasename}`;
       }
     }
 
@@ -252,7 +302,8 @@ async function processMarkdownFile(filePath, type = 'post') {
       status: metadata.draft ? 'draft' : 'publish',
       type: type === 'activity' ? 'activity' : 'post',
       customFields: {},
-      featured_image: metadata.feature_image || null
+      featured_image: featuredImageUrl,
+      slug: folderName // Usa il nome della cartella come slug
     };
 
     // Custom fields per activities
@@ -369,11 +420,12 @@ function generateWXR(posts) {
     tagId++;
   });
 
-  // Posts
+  // Posts (salviamo la featured_image URL come postmeta temporaneo)
   posts.forEach(post => {
     if (!post) return;
 
-    const postSlug = post.title.toLowerCase()
+    // Usa lo slug dalla cartella invece di generarlo dal titolo
+    const postSlug = post.slug || post.title.toLowerCase()
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-')
       .substring(0, 200);
@@ -430,10 +482,11 @@ function generateWXR(posts) {
       });
     }
 
-    // Featured image
+    // Featured image URL - salviamo come postmeta temporaneo
+    // Dopo l'import userai uno script PHP per creare gli attachment
     if (post.featured_image) {
       xml += `      <wp:postmeta>
-        <wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+        <wp:meta_key><![CDATA[_featured_image_url]]></wp:meta_key>
         <wp:meta_value><![CDATA[${post.featured_image}]]></wp:meta_value>
       </wp:postmeta>
 `;
