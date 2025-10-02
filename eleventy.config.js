@@ -97,7 +97,7 @@ export default async function(eleventyConfig) {
 			language: "en",
 			title: "Code And Run",
 			subtitle: "Blog of a running developer",
-			base: "https://codeandrun.it/",
+			base: "https://static.codeandrun.it/",
 			author: {
 				name: "Alex Mufatti"
 			}

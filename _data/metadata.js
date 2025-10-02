@@ -1,6 +1,6 @@
 export default {
 	title: "Code And Run",
-	url: "https://codeandrun.it/",
+	url: "https://static.codeandrun.it/",
 	language: "it",
 	description: "Blog of a running developer",
 	author: {
