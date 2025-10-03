@@ -14,37 +14,135 @@
     max-width: 100%;
 }
 
-/* Activity Meta Display */
+/* Activity Meta Display - Stile compatto con colore accent */
 .activity-meta {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-    padding: 1rem;
-    background: #f5f5f5;
-    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(51, 88, 122, 0.05);
+    border-left: 3px solid #33587a;
+    border-radius: 4px;
 }
 
-.activity-meta-item {
+.activity-meta__item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.35rem 0;
+    flex: 0 1 auto;
 }
 
-.activity-meta-label {
+.activity-meta__item:hover {
+    opacity: 0.85;
+}
+
+.activity-meta__label {
     font-weight: 600;
-    color: #333;
+    color: #33587a;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
 }
 
-.activity-meta-value {
-    font-size: 1.2em;
+.activity-meta__value {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
 }
 
-/* Training Types & Feelings Emoji Display */
+/* Training Pairs Display - Type + Feeling insieme */
+.training-pairs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 1em;
+}
+
+.training-pair {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.15rem 0.4rem;
+    background: rgba(51, 88, 122, 0.08);
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.training-type-item,
+.training-feeling-item {
+    display: inline-block;
+    line-height: 1;
+}
+
+.training-separator {
+    opacity: 0.35;
+    font-size: 0.65em;
+    margin: 0 0.1rem;
+    color: #33587a;
+}
+
+/* Legacy styles per visualizzazione separata (se necessario) */
 .training-types,
 .training-feelings {
     display: flex;
-    gap: 0.25rem;
-    font-size: 1.5em;
+    gap: 0.5rem;
+    font-size: 1.8em;
+}
+
+.training-type-item:hover,
+.training-feeling-item:hover {
+    transform: scale(1.15);
+}
+
+/* Places styling */
+.places {
+    font-size: 0.85rem;
+    color: #33587a;
+    font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .activity-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .activity-meta__item {
+        min-width: 100%;
+    }
+}
+
+/* Variante stile minimale (aggiungi classe 'activity-meta--minimal' al wrapper) */
+.activity-meta--minimal {
+    background: transparent;
+    border: 1px solid rgba(51, 88, 122, 0.2);
+    border-left-width: 3px;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Variante stile scuro (aggiungi classe 'activity-meta--dark' al wrapper) */
+.activity-meta--dark {
+    background: rgba(51, 88, 122, 0.9);
+    border-left-color: rgba(51, 88, 122, 0.5);
+}
+
+.activity-meta--dark .activity-meta__label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.activity-meta--dark .places {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.activity-meta--dark .training-separator {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive Images in Figure */

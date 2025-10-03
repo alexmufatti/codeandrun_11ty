@@ -14,9 +14,6 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-// Include template functions
-require_once plugin_dir_path(__FILE__) . 'template-functions.php';
-
 class CodeAndRun_Companion {
 
     private static $instance = null;
@@ -36,8 +33,10 @@ class CodeAndRun_Companion {
         add_action('init', array($this, 'register_custom_post_types'));
         add_action('init', array($this, 'register_taxonomies'));
         add_action('init', array($this, 'register_meta_fields'));
-        add_action('add_meta_boxes', array($this, 'add_activity_meta_boxes'));
-        add_action('save_post_activity', array($this, 'save_activity_meta'), 10, 2);
+        add_action('init', array($this, 'register_blocks'));
+        // Meta box classico disabilitato - usiamo solo il pannello Gutenberg nella sidebar
+        // add_action('add_meta_boxes', array($this, 'add_activity_meta_boxes'));
+        // add_action('save_post_activity', array($this, 'save_activity_meta'), 10, 2);
 
         // Register shortcodes
         add_shortcode('strava', array($this, 'strava_shortcode'));
@@ -115,6 +114,111 @@ class CodeAndRun_Companion {
     public function register_taxonomies() {
         // Potresti voler registrare taxonomy personalizzate per i luoghi, tipi di allenamento, etc.
         // Per ora usiamo le taxonomy standard (tags, categories)
+    }
+
+    /**
+     * Register Gutenberg Blocks
+     */
+    public function register_blocks() {
+        // Registra il blocco Activity Metadata
+        register_block_type('codeandrun/activity-meta', array(
+            'editor_script' => 'codeandrun-activity-meta-block',
+            'editor_style'  => 'codeandrun-editor',
+            'style'         => 'codeandrun-companion',
+            'render_callback' => array($this, 'render_activity_meta_block'),
+        ));
+    }
+
+    /**
+     * Render callback per il blocco Activity Metadata
+     */
+    public function render_activity_meta_block($attributes, $content) {
+        // Ottieni il post corrente
+        $post_id = get_the_ID();
+
+        if (!$post_id || get_post_type($post_id) !== 'activity') {
+            return '';
+        }
+
+        // Default attributes
+        $show_types = isset($attributes['showTypes']) ? $attributes['showTypes'] : true;
+        $show_feelings = isset($attributes['showFeelings']) ? $attributes['showFeelings'] : true;
+        $show_places = isset($attributes['showPlaces']) ? $attributes['showPlaces'] : true;
+        $style_variant = isset($attributes['styleVariant']) ? $attributes['styleVariant'] : 'default';
+
+        // Ottieni i metadata
+        $types = get_post_meta($post_id, 'training_types', true);
+        $feelings = get_post_meta($post_id, 'training_feelings', true);
+        $places = get_post_meta($post_id, 'places', true);
+
+        // Se non ci sono metadata, non renderizzare nulla
+        if (empty($types) && empty($feelings) && empty($places)) {
+            return '';
+        }
+
+        // Classe CSS
+        $meta_class = 'activity-meta';
+        if ($style_variant === 'minimal') {
+            $meta_class .= ' activity-meta--minimal';
+        } elseif ($style_variant === 'dark') {
+            $meta_class .= ' activity-meta--dark';
+        }
+
+        // Costruisci l'HTML
+        $output = '<div class="' . esc_attr($meta_class) . '">';
+
+        // Crea coppie type-feeling per ogni allenamento
+        $types_array = !empty($types) ? array_map('trim', explode(',', $types)) : array();
+        $feelings_array = !empty($feelings) ? array_map('trim', explode(',', $feelings)) : array();
+        $max_trainings = max(count($types_array), count($feelings_array));
+
+        // Mostra le coppie type-feeling
+        if (($show_types || $show_feelings) && $max_trainings > 0) {
+            $output .= '<div class="activity-meta__item activity-meta__trainings">';
+            $output .= '<span class="activity-meta__label">' . __('Trainings', 'codeandrun-companion') . '</span>';
+            $output .= '<div class="activity-meta__value training-pairs">';
+
+            for ($i = 0; $i < $max_trainings; $i++) {
+                $type = isset($types_array[$i]) ? $types_array[$i] : '';
+                $feeling = isset($feelings_array[$i]) ? $feelings_array[$i] : '';
+
+                // Salta se entrambi sono vuoti
+                if (empty($type) && empty($feeling)) {
+                    continue;
+                }
+
+                $output .= '<div class="training-pair">';
+
+                if ($show_types && !empty($type)) {
+                    $output .= '<span class="training-type-item">' . esc_html($type) . '</span>';
+                }
+
+                // Separatore solo se entrambi presenti
+                if ($show_types && $show_feelings && !empty($type) && !empty($feeling)) {
+                    $output .= '<span class="training-separator">+</span>';
+                }
+
+                if ($show_feelings && !empty($feeling)) {
+                    $output .= '<span class="training-feeling-item">' . esc_html($feeling) . '</span>';
+                }
+
+                $output .= '</div>';
+            }
+
+            $output .= '</div></div>';
+        }
+
+        // Places
+        if ($show_places && !empty($places)) {
+            $output .= '<div class="activity-meta__item">';
+            $output .= '<span class="activity-meta__label">' . __('Places', 'codeandrun-companion') . '</span>';
+            $output .= '<div class="activity-meta__value places">' . esc_html($places) . '</div>';
+            $output .= '</div>';
+        }
+
+        $output .= '</div>';
+
+        return $output;
     }
 
     /**
@@ -311,7 +415,7 @@ class CodeAndRun_Companion {
     public function enqueue_editor_assets() {
         $screen = get_current_screen();
 
-        // Carica solo per il post type 'activity'
+        // Pannello sidebar metadata - solo per il post type 'activity'
         if ($screen && $screen->post_type === 'activity') {
             wp_enqueue_script(
                 'codeandrun-activity-meta',
@@ -320,14 +424,23 @@ class CodeAndRun_Companion {
                 '1.0.0',
                 true
             );
-
-            wp_enqueue_style(
-                'codeandrun-editor',
-                plugin_dir_url(__FILE__) . 'assets/style.css',
-                array('wp-edit-blocks'),
-                '1.0.0'
-            );
         }
+
+        // Blocco Activity Metadata - disponibile ovunque (post, activity, editor tema)
+        wp_enqueue_script(
+            'codeandrun-activity-meta-block',
+            plugin_dir_url(__FILE__) . 'assets/activity-meta-block.js',
+            array('wp-blocks', 'wp-element', 'wp-components', 'wp-data', 'wp-block-editor'),
+            '1.0.0',
+            true
+        );
+
+        wp_enqueue_style(
+            'codeandrun-editor',
+            plugin_dir_url(__FILE__) . 'assets/style.css',
+            array('wp-edit-blocks'),
+            '1.0.0'
+        );
     }
 
     /**
